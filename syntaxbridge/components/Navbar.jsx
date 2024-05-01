@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { CodeIcon } from "./Hero";
 
 const links = [
   {
