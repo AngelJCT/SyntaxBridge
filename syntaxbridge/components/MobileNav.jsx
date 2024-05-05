@@ -38,7 +38,7 @@ const MobileNav = () => {
             <Logo />
             <Navbar
               containerStyles="flex flex-col items-center gap-y-6 bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:text-gray-200 bg-clip-text text-transparent"
-              linkStyles="text-2xl font-semibold tracking-[1px]"
+              linkStyles="text-2xl xs:text-sm font-semibold tracking-[1px]"
             />
             <Link
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"

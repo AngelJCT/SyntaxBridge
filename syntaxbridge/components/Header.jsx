@@ -48,8 +48,8 @@ const Header = () => {
     <header
       className={`${
         header
-          ? "py-4 bg-[#f1f2f3] shadow-xl dark:bg-[#0f0f12] border-b dark:border-gray-700"
-          : "py-6 bg-[#f1f2f3] dark:bg-transparent border-b"
+          ? "py-4 bg-[#eceff2] shadow-xl dark:bg-[#0f0f12] border-b dark:border-gray-700"
+          : "py-6 bg-[#eceff2] dark:bg-transparent border-b"
       } sticky top-0 z-30 transition-all ${pathname === "/" && "bg-[]"}`}
     >
       <div className="container mx-auto">
