@@ -52,17 +52,17 @@
 }
 
 .python-container {
-  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b79] dark:border dark:border-[#b7bdc2] hover:animate-bounce;
+  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b47] dark:border dark:border-[#b7bdc247] hover:animate-bounce;
 }
 
 .java-container {
-  @apply sm:w-[420px] h-[100px] xs:w-[340px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b79] dark:border dark:border-[#b7bdc2] hover:animate-bounce;
+  @apply sm:w-[420px] h-[100px] xs:w-[340px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b47] dark:border dark:border-[#b7bdc247] hover:animate-bounce;
 }
 
 .javascript-container {
-  @apply sm:w-[350px] h-[100px] xs:w-[290px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b79] dark:border dark:border-[#b7bdc2] hover:animate-bounce;
+  @apply sm:w-[350px] h-[100px] xs:w-[290px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b47] dark:border dark:border-[#b7bdc247] hover:animate-bounce;
 }
 
 .rust-container {
-  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b79] dark:border dark:border-[#b7bdc2] hover:animate-bounce;
+  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-lg dark:shadow-none rounded-xl border border-[#26292b47] dark:border dark:border-[#b7bdc247] hover:animate-bounce;
 }
