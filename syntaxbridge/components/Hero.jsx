@@ -26,19 +26,23 @@ const Hero = () => {
         </div>
 
         {/* Left lines */}
-        <div className="gap-x-3 flex flex-row">
-          {Array.from({ length: 20 }).map((_, index) => (
+        {/* <div className="gap-x-[3px] flex flex-row">
+          {Array.from({ length: 70 }).map((_, index) => (
             <div
               key={index}
-              className="hidden xl:block left-full w-[30px] h-[5px] border-b border-t border-[#26292b47] dark:border-[#b7bdc247] mb-8 md:mb-10 shadow-md"
+              className="hidden xl:block left-full w-[5px] h-[5px] border-b border-[#26292b47] dark:border-[#b7bdc247] mb-8 md:mb-10 shadow-md"
             ></div>
           ))}
-        </div>
+        </div> */}
 
         {/* Code Snippets Containers */}
         <div className="flex flex-col xl:flex-row gap-x-3 gap-y-5 xl:gap-y-0 items-center">
           <div className="python-container py-3 px-3 text-center items-center justify-center text-[#26292b] dark:text-[#f7f8f8]">
-            <h3 className="font-semibold xs:text-sm sm:text-lg mb-3">Python</h3>
+            <div className="">
+              <h3 className="font-semibold xs:text-sm sm:text-lg mb-3">
+                Python
+              </h3>
+            </div>
             <pre className="font-mono xs:text-sm sm:text-lg">
               print("Hello, World!")
             </pre>
@@ -66,14 +70,14 @@ const Hero = () => {
         </div>
 
         {/* Right lines */}
-        <div className="gap-x-3 flex flex-row absolute right-4">
-          {Array.from({ length: 20 }).map((_, index) => (
+        {/* <div className="gap-x-1 flex flex-row absolute right-4">
+          {Array.from({ length: 65 }).map((_, index) => (
             <div
               key={index}
-              className="hidden xl:block w-[30px] h-[5px] border-b border-t border-[#26292b47] dark:border-[#b7bdc247] mt-8 md:mt-10 shadow-md"
+              className="hidden xl:block w-[5px] h-[5px] border-b border-[#26292b47] dark:border-[#b7bdc247] mt-8 md:mt-10 shadow-md"
             ></div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
