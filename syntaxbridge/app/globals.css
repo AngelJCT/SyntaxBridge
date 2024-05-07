@@ -51,6 +51,12 @@
   }
 }
 
+@layer base {
+  body {
+    @apply bg-[#eceff2] dark:bg-[#0f0f12];
+  }
+}
+
 @keyframes pulseAnimation {
   0%,
   100% {
@@ -61,25 +67,139 @@
   }
 }
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .python-container:hover,
 .java-container:hover,
 .javascript-container:hover,
 .rust-container:hover {
+  @apply shadow-xl;
   animation: pulseAnimation 1.5s infinite;
 }
 
 .python-container {
-  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-md dark:shadow-none rounded-xl border border-[#26292b30] dark:border dark:border-[#b7bdc230];
+  @apply sm:w-[300px] sm:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .java-container {
-  @apply sm:w-[420px] h-[100px] xs:w-[340px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-md dark:shadow-none rounded-xl border border-[#26292b30] dark:border dark:border-[#b7bdc230];
+  @apply sm:w-[420px] sm:h-[100px] xs:w-[340px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .javascript-container {
-  @apply sm:w-[350px] h-[100px] xs:w-[290px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-md dark:shadow-none rounded-xl border border-[#26292b30] dark:border dark:border-[#b7bdc230];
+  @apply sm:w-[350px] sm:h-[100px] xs:w-[290px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .rust-container {
-  @apply sm:w-[300px] h-[100px] xs:w-[240px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-md dark:shadow-none rounded-xl border border-[#26292b30] dark:border dark:border-[#b7bdc230];
+  @apply sm:w-[300px] sm:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+}
+
+.feature-card {
+  @apply h-[400px] bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.feature-title {
+  @apply text-2xl tracking-[1px] font-semibold text-[#26292b] dark:text-[#f7f8f8] mb-5;
+}
+
+.feature-description {
+  @apply text-base text-gray-600 dark:text-gray-400 leading-6 mb-5;
+}
+
+.feature-card:hover {
+  @apply shadow-2xl;
+  animation: pulseAnimation 1.5s infinite;
+}
+
+.gradient-ball-1 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0px;
+  background: #8197a8;
+  filter: blur(100px);
+}
+
+.dark .gradient-ball-1 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0px;
+  background: #8197a8;
+  filter: blur(190px);
+}
+
+.gradient-ball-2 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: 0px;
+  background: #8197a8;
+  filter: blur(100px);
+}
+
+.dark .gradient-ball-2 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0px;
+  background: #8197a8;
+  filter: blur(190px);
+}
+
+.gradient-ball-3 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background: #8197a8;
+  filter: blur(110px);
+}
+
+.dark .gradient-ball-3 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background: #8197a8;
+  filter: blur(190px);
 }
