@@ -98,6 +98,18 @@
   }
 }
 
+@keyframes colorShift {
+  0% {
+    background: linear-gradient(to right, #8197a8, #393d41);
+  }
+  50% {
+    background: linear-gradient(to right, #a8d1e7, #393d41);
+  }
+  100% {
+    background: linear-gradient(to right, #8197a8, #393d41);
+  }
+}
+
 .python-container:hover,
 .java-container:hover,
 .javascript-container:hover,
@@ -123,16 +135,16 @@
 }
 
 .feature-card {
-  @apply h-[400px] bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  @apply md:h-[400px] xs:h-[350px] bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 .feature-title {
-  @apply text-2xl tracking-[1px] font-semibold text-[#26292b] dark:text-[#f7f8f8] mb-5;
+  @apply sm:text-2xl xs:text-lg tracking-[1px] font-semibold text-[#26292b] dark:text-[#f7f8f8] mb-5;
 }
 
 .feature-description {
-  @apply text-base text-gray-600 dark:text-gray-400 leading-6 mb-5;
+  @apply sm:text-base xs:text-sm text-gray-600 dark:text-gray-400 leading-6 mb-5;
 }
 
 .feature-card:hover {
@@ -202,4 +214,20 @@
   height: 300px;
   background: #8197a8;
   filter: blur(190px);
+}
+
+.cta-container {
+  @apply py-8 bg-gradient-to-br from-[#eceff2] to-[#8197a8] via-[#d5dde2] dark:bg-[#798189] p-4 rounded-xl xl:rounded-tr-[200px] xl:rounded-bl-[200px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] xs:rounded-tr-[50px] xs:rounded-bl-[50px] dark:bg-gradient-to-br dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] shadow-xl dark:shadow-none;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.dark .shift-gradient {
+  animation: float 2s linear infinite;
+  background-size: 400% 400%;
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background: #8197a8;
+  filter: blur(200px);
 }

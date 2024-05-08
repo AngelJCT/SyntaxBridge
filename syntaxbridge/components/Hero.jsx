@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section className="z-10 py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] xl:pt-28 bg-gradient-to-b from-[#eceff2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] rounded-b-[130px] shadow-2xl drop-shadow-lg dark:shadow-none">
+    <section className="z-10 py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[70px] sm:pt-[100px] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] rounded-b-[130px] shadow-2xl drop-shadow-lg dark:shadow-none">
       <div className="container xs:px-[1rem] mx-auto relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10">
           <h1 className="mb-4 xl:p-2 font-bold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] bg-gradient-to-l from-[#5c656d] to-[#26292b] tracking-[2px] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">

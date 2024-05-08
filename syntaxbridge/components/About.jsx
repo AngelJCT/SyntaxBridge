@@ -24,9 +24,9 @@ function CodeIcon(props) {
 
 const About = () => {
   return (
-    <section className="py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] xl:pt-28">
+    <section className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]">
       <div className="container xs:px-[1rem] mx-auto relative">
-        <div className="gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[95rem]"></div>
+        <div className="gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[90rem] sm:top-[85rem]"></div>
         <div className="gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
         {/* <div className="gradient-ball-3 -z-10 absolute md:top-[17rem] xs:top-[50rem] xs:right-[80px] sm:right-[230px] md:right-[600px]"></div> */}
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-12">
