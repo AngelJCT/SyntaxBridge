@@ -41,7 +41,7 @@
     "swift": "a = 10",
     "kotlin": "val a = 10"
   },
-  "function_declaration": {
+  "functions": {
     "javascript": "function add(a, b) {\n    return a + b;\n}",
     "python": "def add(a, b):\n    return a + b",
     "java": "public static int add(int a, int b) {\n    return a + b;\n}",
@@ -55,7 +55,7 @@
     "swift": "func add(a, b) {\n    return a + b;\n}",
     "kotlin": "fun add(a, b) {\n    return a + b;\n}"
   },
-  "imports & Exports": {
+  "imports_exports": {
     "javascript": "import { add } from './add.js';",
     "python": "from add import add",
     "java": "import static add.add;",
@@ -69,7 +69,7 @@
     "swift": "import add",
     "kotlin": "import add"
   },
-  "Classes": {
+  "classes": {
     "javascript": "class Person {\n    constructor(name) {\n        this.name = name;\n    }\n}",
     "python": "class Person:\n    def __init__(self, name):\n        self.name = name\n",
     "java": "public class Person {\n    private String name;\n\n    public Person(String name) {\n        this.name = name;\n    }\n}",

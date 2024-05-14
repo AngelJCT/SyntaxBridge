@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import {
   SelectValue,
   SelectTrigger,
@@ -8,8 +11,34 @@ import {
   SelectContent,
   Select,
 } from "@/components/ui/select";
+import snippets from "@/data/snippets.json";
+
+const concepts = [
+  { name: "Loops", value: "loops" },
+  { name: "If/Else", value: "if_else" },
+  { name: "Variable Declaration", value: "variable_declaration" },
+  { name: "Imports & Exports", value: "imports_exports" },
+  { name: "Functions", value: "functions" },
+  { name: "Classes", value: "classes" },
+  { name: "AI" },
+]
 
 export default function SyntaxBridge() {
+  const [selectedConcept, setSelectedConcept] = useState("Loops");
+  const [language1, setLanguage1] = useState("JavaScript");
+  const [language2, setLanguage2] = useState("Python");
+
+  const handleConceptClick = (concept) => {
+    setSelectedConcept(concept);
+  };
+
+  const renderSnippet = (concept, language) => {
+    if (snippets[concept] && snippets[concept][language]) {
+      return snippets[concept][language];
+    }
+    return "No snippet available";
+  }
+
   return (
     <div className="flex min-h-screen">
       <div className="hidden w-[280px] dark:border-none bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] p-6 dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] lg:block">
@@ -17,55 +46,16 @@ export default function SyntaxBridge() {
           <h1 className="flex items-center gap-3 rounded-lg px-3 py-2 text-2xl font-semibold tracking-[1px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
             Programming Concepts
           </h1>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            Loops
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            If/Else
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            Variable Declaration
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            Imports & Exports
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            Functions
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            Classes
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-black dark:text-gray-200 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-gray-600"
-            href="#"
-          >
-            <CodeIcon className="h-5 w-5" />
-            AI
-          </Link>
+          {concepts.map((concept) => (
+            <Link
+              className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"
+              href="#"
+              onClick={() => handleConceptClick(concept.value)}
+            >
+              <CodeIcon className="h-5 w-5" />
+              {concept.name}
+            </Link>
+          ))}
         </nav>
       </div>
       <div className="flex-1 p-6 md:p-8">
@@ -79,45 +69,27 @@ export default function SyntaxBridge() {
             Cross the Syntax Divide
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
-            <Select>
+            <Select onValueChange={(value) => setLanguage1(value)}>
               <SelectTrigger className="w-full md:w-[180px] shadow-sm">
                 <SelectValue placeholder="Select Language 1" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectItem value="javascript">JavaScript</SelectItem>
-                  <SelectItem value="python">Python</SelectItem>
-                  <SelectItem value="java">Java</SelectItem>
-                  <SelectItem value="csharp">C#</SelectItem>
-                  <SelectItem value="rust">Rust</SelectItem>
-                  <SelectItem value="c">C</SelectItem>
-                  <SelectItem value="go">Go</SelectItem>
-                  <SelectItem value="kotlin">Kotlin</SelectItem>
-                  <SelectItem value="php">PHP</SelectItem>
-                  <SelectItem value="c++">C++</SelectItem>
-                  <SelectItem value="ruby">Ruby</SelectItem>
-                  <SelectItem value="swift">Swift</SelectItem>
+                {Object.keys(snippets.loops).map((lang) => (
+                  <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
+                ))}
                 </SelectGroup>
               </SelectContent>
             </Select>
-            <Select>
+            <Select onValueChange={(value) => setLanguage2(value)}>
               <SelectTrigger className="w-full md:w-[180px] shadow-sm">
                 <SelectValue placeholder="Select Language 2" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectItem value="javascript">JavaScript</SelectItem>
-                  <SelectItem value="python">Python</SelectItem>
-                  <SelectItem value="java">Java</SelectItem>
-                  <SelectItem value="csharp">C#</SelectItem>
-                  <SelectItem value="rust">Rust</SelectItem>
-                  <SelectItem value="c">C</SelectItem>
-                  <SelectItem value="go">Go</SelectItem>
-                  <SelectItem value="kotlin">Kotlin</SelectItem>
-                  <SelectItem value="php">PHP</SelectItem>
-                  <SelectItem value="c++">C++</SelectItem>
-                  <SelectItem value="ruby">Ruby</SelectItem>
-                  <SelectItem value="swift">Swift</SelectItem>
+                {Object.keys(snippets.loops).map((lang) => (
+                  <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
+                ))}
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -127,14 +99,14 @@ export default function SyntaxBridge() {
           <div className="code-box p-6">
             <div className="h-[300px] overflow-auto">
               <pre className="font-mono text-lg dark:text-gray-100">
-                for (let i = 0; i
+                {renderSnippet(selectedConcept, language1)}
               </pre>
             </div>
           </div>
           <div className="code-box p-6">
             <div className="h-[300px] overflow-auto">
               <pre className="font-mono text-lg dark:text-gray-100">
-                for i in range(10): print(i)
+                {renderSnippet(selectedConcept, language2)}
               </pre>
             </div>
           </div>
