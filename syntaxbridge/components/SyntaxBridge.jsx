@@ -12,7 +12,7 @@ import {
 export default function SyntaxBridge() {
   return (
     <div className="flex min-h-screen">
-      <div className="hidden w-[280px] dark:border-none bg-gradient-to-b from-[#f1f2f3] to-[#b7bdc2] p-6 dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#3f404d] lg:block">
+      <div className="hidden w-[280px] dark:border-none bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] p-6 dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] lg:block">
         <nav className="grid gap-4">
           <h1 className="flex items-center gap-3 rounded-lg px-3 py-2 text-2xl font-semibold tracking-[1px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
             Programming Concepts
@@ -68,7 +68,7 @@ export default function SyntaxBridge() {
           </Link>
         </nav>
       </div>
-      <div className="flex-1 p-6 md:p-8 bg-[#f1f2f3] dark:bg-[#0f0f12]">
+      <div className="flex-1 p-6 md:p-8">
         <div className="flex flex-col items-center justify-between">
           <h1 className="text-6xl font-bold mb-4 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
             <p>
@@ -124,14 +124,14 @@ export default function SyntaxBridge() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
-          <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 shadow-sm dark:border-gray-600 dark:bg-[#1d1f2569]">
+          <div className="code-box p-6">
             <div className="h-[300px] overflow-auto">
               <pre className="font-mono text-lg dark:text-gray-100">
                 for (let i = 0; i
               </pre>
             </div>
           </div>
-          <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 shadow-sm dark:border-gray-600 dark:bg-[#1d1f2569]">
+          <div className="code-box p-6">
             <div className="h-[300px] overflow-auto">
               <pre className="font-mono text-lg dark:text-gray-100">
                 for i in range(10): print(i)

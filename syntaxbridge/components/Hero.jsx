@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="z-10 py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[70px] sm:pt-[100px] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] rounded-b-[130px] shadow-2xl drop-shadow-lg dark:shadow-none">
+    <section className="z-10 py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[70px] sm:pt-[100px] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] sm:rounded-b-[130px] xs:rounded-b-[110px] shadow-2xl drop-shadow-lg dark:shadow-none">
       <div className="container xs:px-[1rem] mx-auto relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10">
           <h1 className="mb-4 xl:p-2 font-bold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] bg-gradient-to-l from-[#5c656d] to-[#26292b] tracking-[2px] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
@@ -20,9 +21,19 @@ const Hero = () => {
             enhances coding efficiency by bridging the syntax divide.
           </p>
 
-          <Button className="gap-x-2 bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-200">
-            Get Started
-          </Button>
+          {/* Buttons */}
+          <div className="flex flex-col md:flex-row gap-x-4 mx-auto items-center justify-center">
+            <Link href="sign-up">
+              <Button className="bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-300 shadow-sm dark:shadow-none">
+                Get Started
+              </Button>
+            </Link>
+            <Link href="sign-in">
+              <Button className="bg-transparent dark:transparent border border-[#26292b15] dark:border-[#b7bdc220] text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-[#393d41] shadow-sm dark:shadow-none">
+                Log In
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Left lines */}

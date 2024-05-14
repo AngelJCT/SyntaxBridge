@@ -152,6 +152,12 @@
   animation: pulseAnimation 1.5s infinite;
 }
 
+.code-box {
+  @apply md:h-[400px] xs:h-[350px] bg-transparent dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
 .gradient-ball-1 {
   animation: float 2s linear infinite;
   background-size: 200% 200%;
@@ -222,6 +228,11 @@
   -webkit-backdrop-filter: blur(3px);
 }
 
+.cta-container:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px 0 #8197a8bc;
+}
+
 .dark .shift-gradient {
   animation: float 2s linear infinite;
   background-size: 400% 400%;
@@ -230,4 +241,30 @@
   height: 300px;
   background: #8197a8;
   filter: blur(200px);
+}
+
+.dark .spinner {
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+    0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.dark .spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
 }

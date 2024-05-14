@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { useAuth, SignOutButton } from "@clerk/nextjs";
+import { Button } from "./ui/button";
 
 const links = [
   {
@@ -12,8 +14,19 @@ const links = [
   },
 ];
 
-const Navbar = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Navbar = ({
+  containerStyles,
+  linkStyles,
+  underlineStyles
+}) => {
   const pathname = usePathname();
+  const { isSignedIn } = useAuth(); // Get the user's authentication status
+
+  const handleSignOut = async () => {
+    await signOut();
+    window.location.href = "/"; // Redirect to home page after sign out
+  };
+
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
@@ -36,6 +49,11 @@ const Navbar = ({ containerStyles, linkStyles, underlineStyles }) => {
           </Link>
         );
       })}
+      {isSignedIn && (
+        <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
+          Log out
+        </SignOutButton>
+        )}
     </nav>
   );
 };

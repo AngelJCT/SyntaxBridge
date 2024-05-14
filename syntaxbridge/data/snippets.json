@@ -27,5 +27,60 @@
     "swift": "if a > b {\n    print(\"a is greater than b\")\n} else {\n    print(\"b is greater than a\")\n}",
     "kotlin": "if (a > b) {\n    println(\"a is greater than b\")\n} else {\n    println(\"b is greater than a\")\n}"
   },
-  "variable_declaration": {}
+  "variable_declaration": {
+    "javascript": "let a = 10;",
+    "python": "a = 10",
+    "java": "int a = 10;",
+    "c": "int a = 10;",
+    "cpp": "int a = 10;",
+    "csharp": "int a = 10;",
+    "php": "$a = 10;",
+    "ruby": "a = 10",
+    "go": "a = 10",
+    "rust": "a = 10",
+    "swift": "a = 10",
+    "kotlin": "val a = 10"
+  },
+  "function_declaration": {
+    "javascript": "function add(a, b) {\n    return a + b;\n}",
+    "python": "def add(a, b):\n    return a + b",
+    "java": "public static int add(int a, int b) {\n    return a + b;\n}",
+    "c": "int add(int a, int b) {\n    return a + b;\n}",
+    "cpp": "int add(int a, int b) {\n    return a + b;\n}",
+    "csharp": "public static int Add(int a, int b) {\n    return a + b;\n}",
+    "php": "function add($a, $b) {\n    return $a + $b;\n}",
+    "ruby": "def add(a, b)\n    a + b\nend",
+    "go": "func add(a, b int) int {\n    return a + b\n}",
+    "rust": "fn add(a, b) {\n    return a + b;\n}",
+    "swift": "func add(a, b) {\n    return a + b;\n}",
+    "kotlin": "fun add(a, b) {\n    return a + b;\n}"
+  },
+  "imports & Exports": {
+    "javascript": "import { add } from './add.js';",
+    "python": "from add import add",
+    "java": "import static add.add;",
+    "c": "import add;",
+    "cpp": "import add;",
+    "csharp": "using static add;",
+    "php": "require_once 'add.php';",
+    "ruby": "require_relative 'add.rb';",
+    "go": "import add",
+    "rust": "mod add;",
+    "swift": "import add",
+    "kotlin": "import add"
+  },
+  "Classes": {
+    "javascript": "class Person {\n    constructor(name) {\n        this.name = name;\n    }\n}",
+    "python": "class Person:\n    def __init__(self, name):\n        self.name = name\n",
+    "java": "public class Person {\n    private String name;\n\n    public Person(String name) {\n        this.name = name;\n    }\n}",
+    "c": "struct Person {\n    char *name;\n};",
+    "cpp": "class Person {\n    private:\n    std::string name;\n\n    public:\n    Person(std::string name) {\n        this->name = name;\n    }\n}",
+    "csharp": "public class Person {\n    private string name;\n\n    public Person(string name) {\n        this.name = name;\n    }\n}",
+    "php": "class Person {\n    private $name;\n\n    public function __construct($name) {\n        $this->name = $name;\n    }\n}",
+    "ruby": "class Person\n    def initialize(name)\n        @name = name\n    end\nend",
+    "go": "type Person struct {\n    name string\n}\n\nfunc NewPerson(name string) *Person {\n    return &Person{name: name}\n}",
+    "rust": "struct Person {\n    name: String\n}\n\nimpl Person {\n    fn new(name: String) -> Person {\n        Person { name }\n    }\n}",
+    "swift": "class Person {\n    private var name: String\n\n    init(name: String) {\n        self._name = name\n    }\n}",
+    "kotlin": "class Person {\n    private val name: String\n\n    constructor(name: String) {\n        this.name = name\n    }\n}"
+  }
 }
