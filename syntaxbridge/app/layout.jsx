@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark, light } from "@clerk/themes";
+import { StateProvider } from "@/context/StateContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +29,10 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={inter.className}>
           <ThemeProvider attribute="class" defaultTheme="light">
-            <Header />
-            {children}
+            <StateProvider>
+              <Header />
+              {children}
+            </StateProvider>
           </ThemeProvider>
         </body>
       </html>

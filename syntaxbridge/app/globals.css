@@ -153,9 +153,32 @@
 }
 
 .code-box {
-  @apply md:h-[400px] xs:h-[350px] bg-transparent dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  @apply md:h-[400px] xs:h-[350px] bg-transparent dark:bg-[#798189] backdrop-blur-[] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+}
+
+.code-box-ai {
+  @apply md:h-[500px] xs:h-[450px] bg-transparent dark:bg-[#798189] bg-opacity-15 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.code-box-ai-2 {
+  @apply md:h-[500px] xs:h-[450px] bg-transparent dark:bg-[#798189] bg-opacity-15 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.syntax-bridge-nav {
+  @apply bg-transparent dark:bg-[#798189] bg-opacity-15 dark:bg-opacity-10 border-r border-[#26292b15] dark:border-[#b7bdc220] shadow-lg dark:shadow-none;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.custom-icon {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 
 .gradient-ball-1 {

@@ -6,6 +6,7 @@ import { ThemeToggler } from "./ThemeToggler";
 import Navbar from "./Navbar";
 import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
+import { useStateContext } from "@/context/StateContext";
 
 function CodeIcon(props) {
   return (
@@ -30,6 +31,8 @@ function CodeIcon(props) {
 const Header = () => {
   const [header, setHeader] = useState(false);
   const pathname = usePathname();
+  const { selectedConcept, handleConceptClick } = useStateContext();
+  
 
   useEffect(() => {
     const scrollYPos = window.addEventListener("scroll", () => {
@@ -66,7 +69,7 @@ const Header = () => {
 
             {/* mobile nav */}
             <div className="xl:hidden">
-              <MobileNav />
+              <MobileNav selectedConcept={selectedConcept} handleConceptClick={handleConceptClick} />
             </div>
           </div>
         </div>

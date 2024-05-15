@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-x-4 mx-auto items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-x-4 gap-y-4 mx-auto items-center justify-center">
             <Link href="sign-up">
               <Button className="bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-300 shadow-sm dark:shadow-none">
                 Get Started
