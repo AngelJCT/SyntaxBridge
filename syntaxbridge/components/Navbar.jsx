@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 
 const links = [
   {
-    name: "Programming concepts",
+    name: "Blog",
     path: "/",
   },
 ];
@@ -32,7 +32,12 @@ const Navbar = ({
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
         return (
-          <Link
+          pathname === "/syntaxbridgepage" ? (
+            <Link href="/programming-concepts" className={`capitalize ${linkStyles}`}>
+              Programming Concepts
+            </Link>
+          ) : (
+            <Link
             href={link.path}
             key={index}
             className={`capitalize ${linkStyles}`}
@@ -48,12 +53,18 @@ const Navbar = ({
             )}
             {link.name}
           </Link>
+          )
         );
       })}
       {isSignedIn ? (
-        <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
-          Log out
-        </SignOutButton>
+        <>
+          <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
+            Log out
+          </SignOutButton>
+          <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles}`}>
+            App
+          </Link>
+        </>
         ) : (
         <Link href="/sign-in" className={`capitalize ${linkStyles}`}>
           Log in
