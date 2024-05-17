@@ -176,10 +176,20 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
+.mission-card:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px 0 #8197a8bc;
+}
+
 .vision-card {
   @apply bg-[#859bab] dark:bg-[#798189] bg-opacity-10 dark:bg-opacity-15 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+}
+
+.vision-card:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px 0 #8197a8bc;
 }
 
 .syntax-bridge-nav {
