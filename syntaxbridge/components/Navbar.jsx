@@ -27,6 +27,7 @@ const Navbar = ({
     window.location.href = "/"; // Redirect to home page after sign out
   };
 
+
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
@@ -49,10 +50,14 @@ const Navbar = ({
           </Link>
         );
       })}
-      {isSignedIn && (
+      {isSignedIn ? (
         <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
           Log out
         </SignOutButton>
+        ) : (
+        <Link href="/sign-in" className={`capitalize ${linkStyles}`}>
+          Log in
+        </Link>
         )}
     </nav>
   );

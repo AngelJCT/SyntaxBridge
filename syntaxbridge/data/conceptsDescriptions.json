@@ -1,0 +1,24 @@
+{
+    "loops": {
+      "description": "Loops are fundamental structures that allow you to execute a block of code multiple times. They are essential for tasks that require repetition, such as iterating over arrays or performing operations until a condition is met. Common types of loops include 'for' loops, which run a specific number of times, and 'while' loops, which run as long as a condition remains true. Using loops can significantly reduce code duplication and improve efficiency in programming."
+    },
+    "if_else": {
+      "description": "The if/else statement is a conditional control structure that allows you to execute different blocks of code based on a boolean condition. If the condition evaluates to true, the code within the 'if' block is executed. If it evaluates to false, the code within the 'else' block (if present) is executed instead. This structure is crucial for making decisions in programs and directing the flow of execution based on dynamic conditions."
+    },
+    "variable_declaration": {
+      "description": "Variable declaration is the process of creating a variable and defining its type and name. This allocates space in memory to store data values that can be used and manipulated throughout the program. Depending on the programming language, variables can be declared with specific data types (e.g., int, string) or inferred from the context. Proper variable declaration is key to writing clear and efficient code, as it helps prevent errors and improves readability."
+    },
+    "imports_exports": {
+      "description": "Imports and exports are mechanisms that enable code modularity by allowing you to include and share code between different files or modules. 'Import' statements bring in functions, classes, or entire modules from external files, while 'export' statements make parts of your code available for use in other files. This practice promotes code reusability, organization, and maintainability by breaking down complex applications into manageable, interconnected components."
+    },
+    "functions": {
+      "description": "Functions are reusable blocks of code designed to perform specific tasks. They take inputs (known as arguments), process them, and often return an output. Functions help in organizing code, making it more modular, and reducing redundancy. By encapsulating repetitive tasks within functions, you can call them multiple times throughout your program, thus simplifying code maintenance and enhancing readability."
+    },
+    "classes": {
+      "description": "Classes are blueprints for creating objects in object-oriented programming. They encapsulate data (attributes) and behaviors (methods) into a single entity. This allows for the creation of objects with similar properties and functionality. Classes support principles like inheritance, polymorphism, and encapsulation, which enable the creation of complex and modular code structures that are easier to manage, extend, and debug."
+    },
+    "ai": {
+      "description": "The AI feature leverages advanced large language model to provide real-time translation of code snippets. Users can input code in one programming language and receive an equivalent code snippet in another language. This tool is invaluable for developers working with multiple programming languages, as it helps them understand and adapt code across different platforms. The AI model can also assist in providing code suggestions, explanations, and improving overall productivity.\n\n**Important:** Always start your prompt with the following sentence: **Translate to {desired language}**."
+    }
+}
+  

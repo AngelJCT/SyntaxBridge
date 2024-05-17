@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   SelectValue,
   SelectTrigger,
@@ -12,6 +12,7 @@ import {
   Select,
 } from "@/components/ui/select";
 import snippets from "@/data/snippets.json";
+import descriptions from "@/data/conceptsDescriptions.json"
 import { useStateContext } from "@/context/StateContext";
 import AIComponent from "./AIComponent";
 
@@ -27,6 +28,12 @@ const concepts = [
 
 export default function SyntaxBridge() {
   const { selectedConcept, setSelectedConcept, language1, setLanguage1, language2, setLanguage2 } = useStateContext();
+  const [description, setDescription] = useState('');
+
+  useEffect(() => {
+    setDescription(descriptions[selectedConcept]?.description || '');
+  
+  }, [selectedConcept])
 
   const handleConceptClick = (concept) => {
     setSelectedConcept(concept);
@@ -39,8 +46,22 @@ export default function SyntaxBridge() {
     return "No snippet available";
   }
 
+  const renderDescription = (description) => {
+    const [mainText, importantText] = description.split('\n\n**Important:**');
+    return (
+      <div className="w-full mt-8 text-gray-500 dark:text-gray-200 items-center justify-center">
+        <p>{mainText}</p>
+        {importantText && (
+          <p className="mt-4 text-red-400 font-semibold">
+            <strong>Important:</strong>{importantText}
+          </p>
+        )}
+      </div>
+    );
+  };
+
   return (
-    <div className="flex min-h-screen">
+    <div className="syntaxbridge-gradient flex min-h-screen">
     {/* concepts nav */}
       <div className="syntax-bridge-nav hidden w-[280px] p-6 lg:block">
         <nav className="grid gap-4">
@@ -63,7 +84,8 @@ export default function SyntaxBridge() {
       <div className="container mx-auto relative xs:px-[5px]">
         {/* main page */}
       <div className="flex-1 xs:py-6 md:p-8">
-      
+      <div className="syntaxbridge-gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[55rem] sm:top-[55rem]"></div>
+      <div className="syntaxbridge-gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
         <div className="flex flex-col items-center justify-between text-center">
           <h1 className="text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] font-bold md:mb-10 xs:mb-8 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
               Syntax<span className="font-normal">Bridge</span>
@@ -118,19 +140,11 @@ export default function SyntaxBridge() {
                 </pre>
               </div>
             </div>
-            
           </div>
         )}
-        <div className="w-full mt-8 text-gray-500 dark:text-gray-200 items-center justify-center">
-          This page provides a side-by-side comparison of programming language
-          syntax for common programming concepts. You can select two languages
-          from the dropdown menus above to see the corresponding code examples
-          displayed in the code editor boxes.
-        </div>
-        
+        {renderDescription(description)}
       </div>
       </div>
-      
     </div>
   );
 }

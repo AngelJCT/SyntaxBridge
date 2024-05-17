@@ -135,7 +135,7 @@
 }
 
 .feature-card {
-  @apply md:h-[400px] xs:h-[350px] bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  @apply md:h-[400px] xs:h-[300px] items-center justify-center bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -159,13 +159,25 @@
 }
 
 .code-box-ai {
-  @apply md:h-[500px] xs:h-[450px] bg-transparent dark:bg-[#798189] bg-opacity-15 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  @apply md:h-[500px] xs:h-[450px] bg-[#d5dde2] dark:bg-[#798189] bg-opacity-25 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
 
 .code-box-ai-2 {
   @apply md:h-[500px] xs:h-[450px] bg-transparent dark:bg-[#798189] bg-opacity-15 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.mission-card {
+  @apply bg-[#859bab] dark:bg-[#798189] bg-opacity-10 dark:bg-opacity-15 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.vision-card {
+  @apply bg-[#859bab] dark:bg-[#798189] bg-opacity-10 dark:bg-opacity-15 p-4 rounded-xl shadow-xl dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -241,6 +253,38 @@
   position: absolute;
   width: 200px;
   height: 300px;
+  background: #8197a8;
+  filter: blur(190px);
+}
+
+.dark .syntaxbridge-gradient-ball-1 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0px;
+  background: #8197a8;
+  filter: blur(190px);
+}
+
+.dark .syntaxbridge-gradient-ball-2 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: 0px;
+  background: #8197a8;
+  filter: blur(190px);
+}
+
+.dark .gradient-ball-purpose {
+  animation: float 2s linear infinite;
+  background-size: 300% 300%;
+  position: absolute;
+  width: 400px;
+  height: 500px;
   background: #8197a8;
   filter: blur(190px);
 }
