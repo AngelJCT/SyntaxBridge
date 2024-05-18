@@ -12,11 +12,7 @@ const CTA = () => {
           <div className="cta-container">
             <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto xs:mb-6 text-gray-600 dark:text-gray-400">
               Ready to simplify your coding experience? Join SyntaxBridge now
-              and streamline your learning curve across multiple programming
-              languages. Whether you are starting your coding journey or looking
-              to expand your language expertise, SyntaxBridge is here to help.
-              Get started for free and unlock the full potential of code
-              comparison and assistance!
+              to streamline learning and mastering multiple languages. Start for free and unlock powerful code comparison and assistance today!
             </p>
 
             <Button className="gap-x-2 bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-300">

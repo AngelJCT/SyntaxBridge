@@ -210,7 +210,7 @@
   width: 200px;
   height: 300px;
   right: 0px;
-  background: #8197a8;
+  background: #b0bfc9;
   filter: blur(100px);
 }
 
@@ -232,7 +232,7 @@
   width: 200px;
   height: 300px;
   left: 0px;
-  background: #8197a8;
+  background: #b0bfc9;
   filter: blur(100px);
 }
 
@@ -267,6 +267,28 @@
   filter: blur(190px);
 }
 
+.syntaxbridge-gradient-ball-1 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0px;
+  background: #b0bfc9;
+  filter: blur(120px);
+}
+
+.syntaxbridge-gradient-ball-2 {
+  animation: float 2s linear infinite;
+  background-size: 200% 200%;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  left: 0px;
+  background: #b0bfc9;
+  filter: blur(120px);
+}
+
 .dark .syntaxbridge-gradient-ball-1 {
   animation: float 2s linear infinite;
   background-size: 200% 200%;
@@ -289,6 +311,16 @@
   filter: blur(190px);
 }
 
+.gradient-ball-purpose {
+  animation: float 2s linear infinite;
+  background-size: 300% 300%;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background: #b0bfc9;
+  filter: blur(200px);
+}
+
 .dark .gradient-ball-purpose {
   animation: float 2s linear infinite;
   background-size: 300% 300%;
@@ -296,7 +328,7 @@
   width: 400px;
   height: 500px;
   background: #8197a8;
-  filter: blur(190px);
+  filter: blur(220px);
 }
 
 .cta-container {
