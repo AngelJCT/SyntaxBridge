@@ -40,8 +40,15 @@ export default function SyntaxBridge() {
   };
 
   const renderSnippet = (concept, language) => {
-    if (snippets[concept] && snippets[concept][language]) {
-      return snippets[concept][language];
+    if (snippets[concept] && snippets[concept].examples && snippets[concept].examples[language]) {
+      return snippets[concept].examples[language].map((example, index) => (
+        <div key={index} className="mb-4">
+          <pre className="font-mono text-lg dark:text-gray-100 bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] rounded-lg p-2 mb-4">
+            {example.code}
+          </pre>
+          <p>{example.description}</p>
+        </div>
+      ));
     }
     return "No snippet available";
   }
@@ -101,7 +108,7 @@ export default function SyntaxBridge() {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                {Object.keys(snippets.loops).map((lang) => (
+                {Object.keys(snippets.loops.examples).map((lang) => (
                   <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
                 ))}
                 </SelectGroup>
@@ -113,7 +120,7 @@ export default function SyntaxBridge() {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                {Object.keys(snippets.loops).map((lang) => (
+                {Object.keys(snippets.loops.examples).map((lang) => (
                   <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
                 ))}
                 </SelectGroup>
@@ -128,16 +135,12 @@ export default function SyntaxBridge() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
             <div className="code-box p-6">
               <div className="h-[300px] overflow-auto">
-                <pre className="font-mono text-lg dark:text-gray-100">
-                  {renderSnippet(selectedConcept, language1)}
-                </pre>
+                {renderSnippet(selectedConcept, language1)}
               </div>
             </div>
             <div className="code-box p-6">
               <div className="h-[300px] overflow-auto">
-                <pre className="font-mono text-lg dark:text-gray-100">
-                  {renderSnippet(selectedConcept, language2)}
-                </pre>
+                {renderSnippet(selectedConcept, language2)}
               </div>
             </div>
           </div>

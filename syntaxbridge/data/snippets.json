@@ -1,86 +1,746 @@
 {
   "loops": {
-    "javascript": "for (let i = 0; i < 10; i++) {\n    console.log(i);\n}",
-    "python": "for i in range(10):\n    print(i)",
-    "java": "for (int i = 0; i < 10; i++) {\n    System.out.println(i);\n}",
-    "c": "for (int i = 0; i < 10; i++) {\n    printf(\"%d\\n\", i);\n}",
-    "cpp": "for (int i = 0; i < 10; i++) {\n    cout << i << endl;\n}",
-    "csharp": "for (int i = 0; i < 10; i++) {\n    Console.WriteLine(i);\n}",
-    "php": "for ($i = 0; $i < 10; $i++) {\n    echo $i;\n}",
-    "ruby": "10.times do |i|\n    puts i\nend",
-    "go": "for i := 0; i < 10; i++ {\n    fmt.Println(i)\n}",
-    "rust": "for i in 0..10 {\n    println!(\"{}\", i);\n}",
-    "swift": "for i in 0...10 {\n    print(i)\n}",
-    "kotlin": "for (i in 0..10) {\n    println(i)\n}"
+    "examples": {
+      "javascript": [
+        {
+          "code": "for (let i = 0; i < 10; i++) {\n    console.log(i);\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "let i = 0;\nwhile (i < 10) {\n    console.log(i);\n    i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "python": [
+        {
+          "code": "for i in range(10):\n    print(i)",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "i = 0\nwhile i < 10:\n    print(i)\n    i += 1",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "java": [
+        {
+          "code": "for (int i = 0; i < 10; i++) {\n    System.out.println(i);\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int i = 0;\nwhile (i < 10) {\n    System.out.println(i);\n    i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "c": [
+        {
+          "code": "for (int i = 0; i < 10; i++) {\n    printf(\"%d\\n\", i);\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int i = 0;\nwhile (i < 10) {\n    printf(\"%d\\n\", i);\n    i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "for (int i = 0; i < 10; i++) {\n    cout << i << endl;\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int i = 0;\nwhile (i < 10) {\n    cout << i << endl;\n    i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "for (int i = 0; i < 10; i++) {\n    Console.WriteLine(i);\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int i = 0;\nwhile (i < 10) {\n    Console.WriteLine(i);\n    i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "php": [
+        {
+          "code": "for ($i = 0; $i < 10; $i++) {\n    echo $i;\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "$i = 0;\nwhile ($i < 10) {\n    echo $i;\n    $i++;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "10.times do |i|\n    puts i\nend",
+          "description": "A simple loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "i = 0\nwhile i < 10\n    puts i\n    i += 1\nend",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "go": [
+        {
+          "code": "for i := 0; i < 10; i++ {\n    fmt.Println(i)\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "i := 0\nfor i < 10 {\n    fmt.Println(i)\n    i++\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "rust": [
+        {
+          "code": "for i in 0..10 {\n    println!(\"{}\", i);\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "let mut i = 0;\nwhile i < 10 {\n    println!(\"{}\", i);\n    i += 1;\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "swift": [
+        {
+          "code": "for i in 0...10 {\n    print(i)\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "var i = 0\nwhile i < 10 {\n    print(i)\n    i += 1\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "for (i in 0..10) {\n    println(i)\n}",
+          "description": "A simple for loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "var i = 0\nwhile (i < 10) {\n    println(i)\n    i++\n}",
+          "description": "A while loop that prints numbers from 0 to 9."
+        }
+      ]
+    }
   },
   "if_else": {
-    "javascript": "if (a > b) {\n    console.log('a is greater than b');\n} else {\n    console.log('b is greater than a');\n}",
-    "python": "if a > b:\n    print('a is greater than b')\nelse:\n    print('b is greater than a')",
-    "java": "if (a > b) {\n    System.out.println('a is greater than b');\n} else {\n    System.out.println('b is greater than a');\n}",
-    "c": "if (a > b) {\n    printf(\"a is greater than b\\n\");\n} else {\n    printf(\"b is greater than a\\n\");\n}",
-    "cpp": "if (a > b) {\n    cout << \"a is greater than b\" << endl;\n} else {\n    cout << \"b is greater than a\" << endl;\n}",
-    "csharp": "if (a > b) {\n    Console.WriteLine(\"a is greater than b\");\n} else {\n    Console.WriteLine(\"b is greater than a\");\n}",
-    "php": "if ($a > $b) {\n    echo 'a is greater than b';\n} else {\n    echo 'b is greater than a';\n}",
-    "ruby": "if a > b\n    puts 'a is greater than b'\nelse\n    puts 'b is greater than a'\nend",
-    "go": "if a > b {\n    fmt.Println(\"a is greater than b\")\n} else {\n    fmt.Println(\"b is greater than a\")\n}",
-    "rust": "if a > b {\n    println!(\"a is greater than b\")\n} else {\n    println!(\"b is greater than a\")\n}",
-    "swift": "if a > b {\n    print(\"a is greater than b\")\n} else {\n    print(\"b is greater than a\")\n}",
-    "kotlin": "if (a > b) {\n    println(\"a is greater than b\")\n} else {\n    println(\"b is greater than a\")\n}"
+    "examples": {
+      "javascript": [
+        {
+          "code": "if (a > b) {\n    console.log('a is greater than b');\n} else {\n    console.log('b is greater than a');\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "python": [
+        {
+          "code": "if a > b:\n    print('a is greater than b')\nelse:\n    print('b is greater than a')",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if score >= 90:\n    grade = 'A'\nelif score >= 80:\n    grade = 'B'\nelse:\n    grade = 'C'",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "java": [
+        {
+          "code": "if (a > b) {\n    System.out.println('a is greater than b');\n} else {\n    System.out.println('b is greater than a');\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "c": [
+        {
+          "code": "if (a > b) {\n    printf(\"a is greater than b\\n\");\n} else {\n    printf(\"b is greater than a\\n\");\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "if (a > b) {\n    cout << \"a is greater than b\" << endl;\n} else {\n    cout << \"b is greater than a\" << endl;\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "if (a > b) {\n    Console.WriteLine(\"a is greater than b\");\n} else {\n    Console.WriteLine(\"b is greater than a\");\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "php": [
+        {
+          "code": "if ($a > $b) {\n    echo 'a is greater than b';\n} else {\n    echo 'b is greater than a';\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if ($score >= 90) {\n    $grade = 'A';\n} else if ($score >= 80) {\n    $grade = 'B';\n} else {\n    $grade = 'C';\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "if a > b\n    puts 'a is greater than b'\nelse\n    puts 'b is greater than a'\nend",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if score >= 90\n    grade = 'A'\nelsif score >= 80\n    grade = 'B'\nelse\n    grade = 'C'\nend",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "go": [
+        {
+          "code": "if a > b {\n    fmt.Println(\"a is greater than b\")\n} else {\n    fmt.Println(\"b is greater than a\")\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "rust": [
+        {
+          "code": "if a > b {\n    println!(\"a is greater than b\")\n} else {\n    println!(\"b is greater than a\")\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "swift": [
+        {
+          "code": "if a > b {\n    print(\"a is greater than b\")\n} else {\n    print(\"b is greater than a\")\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "if (a > b) {\n    println(\"a is greater than b\")\n} else {\n    println(\"b is greater than a\")\n}",
+          "description": "Simple if/else statement to compare two variables."
+        },
+        {
+          "code": "if (score >= 90) {\n    grade = 'A'\n} else if (score >= 80) {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
+          "description": "If/else if/else statement to assign grades based on scores."
+        }
+      ]
+    }
   },
   "variable_declaration": {
-    "javascript": "let a = 10;",
-    "python": "a = 10",
-    "java": "int a = 10;",
-    "c": "int a = 10;",
-    "cpp": "int a = 10;",
-    "csharp": "int a = 10;",
-    "php": "$a = 10;",
-    "ruby": "a = 10",
-    "go": "a = 10",
-    "rust": "a = 10",
-    "swift": "a = 10",
-    "kotlin": "val a = 10"
+    "examples": {
+      "javascript": [
+        {
+          "code": "let a = 10;",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "const b = 'Hello';",
+          "description": "Declare a constant 'b' with the value 'Hello'."
+        }
+      ],
+      "python": [
+        {
+          "code": "a = 10",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "b = 'Hello'",
+          "description": "Declare a variable 'b' with the value 'Hello'."
+        }
+      ],
+      "java": [
+        {
+          "code": "int a = 10;",
+          "description": "Declare an integer variable 'a' with the value 10."
+        },
+        {
+          "code": "String b = 'Hello';",
+          "description": "Declare a string variable 'b' with the value 'Hello'."
+        }
+      ],
+      "c": [
+        {
+          "code": "int a = 10;",
+          "description": "Declare an integer variable 'a' with the value 10."
+        },
+        {
+          "code": "char* b = 'Hello';",
+          "description": "Declare a string variable 'b' with the value 'Hello'."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "int a = 10;",
+          "description": "Declare an integer variable 'a' with the value 10."
+        },
+        {
+          "code": "std::string b = 'Hello';",
+          "description": "Declare a string variable 'b' with the value 'Hello'."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "int a = 10;",
+          "description": "Declare an integer variable 'a' with the value 10."
+        },
+        {
+          "code": "string b = 'Hello';",
+          "description": "Declare a string variable 'b' with the value 'Hello'."
+        }
+      ],
+      "php": [
+        {
+          "code": "$a = 10;",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "$b = 'Hello';",
+          "description": "Declare a variable 'b' with the value 'Hello'."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "a = 10",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "b = 'Hello'",
+          "description": "Declare a variable 'b' with the value 'Hello'."
+        }
+      ],
+      "go": [
+        {
+          "code": "a := 10",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "b := 'Hello'",
+          "description": "Declare a variable 'b' with the value 'Hello'."
+        }
+      ],
+      "rust": [
+        {
+          "code": "let a = 10;",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "let b = 'Hello';",
+          "description": "Declare a variable 'b' with the value 'Hello'."
+        }
+      ],
+      "swift": [
+        {
+          "code": "var a = 10",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "let b = 'Hello'",
+          "description": "Declare a constant 'b' with the value 'Hello'."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "var a = 10",
+          "description": "Declare a variable 'a' with the value 10."
+        },
+        {
+          "code": "val b = 'Hello'",
+          "description": "Declare a constant 'b' with the value 'Hello'."
+        }
+      ]
+    }
   },
   "functions": {
-    "javascript": "function add(a, b) {\n    return a + b;\n}", 
-    "python": "def add(a, b):\n    return a + b",
-    "java": "public static int add(int a, int b) {\n    return a + b;\n}",
-    "c": "int add(int a, int b) {\n    return a + b;\n}",
-    "cpp": "int add(int a, int b) {\n    return a + b;\n}",
-    "csharp": "public static int Add(int a, int b) {\n    return a + b;\n}",
-    "php": "function add($a, $b) {\n    return $a + $b;\n}",
-    "ruby": "def add(a, b)\n    a + b\nend",
-    "go": "func add(a, b int) int {\n    return a + b\n}",
-    "rust": "fn add(a, b) {\n    return a + b;\n}",
-    "swift": "func add(a, b) {\n    return a + b;\n}",
-    "kotlin": "fun add(a, b) {\n    return a + b;\n}"
+    "examples": {
+      "javascript": [
+        {
+          "code": "function add(a, b) {\n    return a + b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "const multiply = (a, b) => a * b;",
+          "description": "A function that multiplies two numbers using arrow syntax."
+        }
+      ],
+      "python": [
+        {
+          "code": "def add(a, b):\n    return a + b",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "def multiply(a, b):\n    return a * b",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "java": [
+        {
+          "code": "public static int add(int a, int b) {\n    return a + b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "public static int multiply(int a, int b) {\n    return a * b;\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "c": [
+        {
+          "code": "int add(int a, int b) {\n    return a + b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "int multiply(int a, int b) {\n    return a * b;\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "int add(int a, int b) {\n    return a + b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "int multiply(int a, int b) {\n    return a * b;\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "public static int Add(int a, int b) {\n    return a + b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "public static int Multiply(int a, int b) {\n    return a * b;\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "php": [
+        {
+          "code": "function add($a, $b) {\n    return $a + $b;\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "function multiply($a, $b) {\n    return $a * $b;\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "def add(a, b)\n    a + b\nend",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "def multiply(a, b)\n    a * b\nend",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "go": [
+        {
+          "code": "func add(a, b int) int {\n    return a + b\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "func multiply(a, b int) int {\n    return a * b\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "rust": [
+        {
+          "code": "fn add(a: i32, b: i32) -> i32 {\n    a + b\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "fn multiply(a: i32, b: i32) -> i32 {\n    a * b\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "swift": [
+        {
+          "code": "func add(a: Int, b: Int) -> Int {\n    return a + b\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "func multiply(a: Int, b: Int) -> Int {\n    return a * b\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "fun add(a: Int, b: Int): Int {\n    return a + b\n}",
+          "description": "A function that adds two numbers."
+        },
+        {
+          "code": "fun multiply(a: Int, b: Int): Int {\n    return a * b\n}",
+          "description": "A function that multiplies two numbers."
+        }
+      ]
+    }
   },
   "imports_exports": {
-    "javascript": "import { add } from './add.js';",
-    "python": "from add import add",
-    "java": "import static add.add;",
-    "c": "import add;",
-    "cpp": "import add;",
-    "csharp": "using static add;",
-    "php": "require_once 'add.php';",
-    "ruby": "require_relative 'add.rb';",
-    "go": "import add",
-    "rust": "mod add;",
-    "swift": "import add",
-    "kotlin": "import add"
+    "examples": {
+      "javascript": [
+        {
+          "code": "import { add } from './add.js';",
+          "description": "Import the 'add' function from another module."
+        },
+        {
+          "code": "export function add(a, b) {\n    return a + b;\n}",
+          "description": "Export the 'add' function for use in other modules."
+        }
+      ],
+      "python": [
+        {
+          "code": "from add import add",
+          "description": "Import the 'add' function from another module."
+        },
+        {
+          "code": "def add(a, b):\n    return a + b",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "java": [
+        {
+          "code": "import static add.add;",
+          "description": "Import the 'add' function from another module."
+        },
+        {
+          "code": "public static int add(int a, int b) {\n    return a + b;\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "c": [
+        {
+          "code": "#include \"add.h\"",
+          "description": "Import the 'add' function from another header file."
+        },
+        {
+          "code": "int add(int a, int b) {\n    return a + b;\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "#include \"add.h\"",
+          "description": "Import the 'add' function from another header file."
+        },
+        {
+          "code": "int add(int a, int b) {\n    return a + b;\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "using static add;",
+          "description": "Import the 'add' function from another namespace."
+        },
+        {
+          "code": "public static int Add(int a, int b) {\n    return a + b;\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "php": [
+        {
+          "code": "require_once 'add.php';",
+          "description": "Import the 'add' function from another file."
+        },
+        {
+          "code": "function add($a, $b) {\n    return $a + $b;\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "require_relative 'add.rb';",
+          "description": "Import the 'add' function from another file."
+        },
+        {
+          "code": "def add(a, b)\n    a + b\nend",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "go": [
+        {
+          "code": "import \"add\"",
+          "description": "Import the 'add' package."
+        },
+        {
+          "code": "func add(a, b int) int {\n    return a + b\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "rust": [
+        {
+          "code": "mod add;",
+          "description": "Import the 'add' module."
+        },
+        {
+          "code": "pub fn add(a: i32, b: i32) -> i32 {\n    a + b\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "swift": [
+        {
+          "code": "import add",
+          "description": "Import the 'add' module."
+        },
+        {
+          "code": "func add(a: Int, b: Int) -> Int {\n    return a + b\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "import add",
+          "description": "Import the 'add' module."
+        },
+        {
+          "code": "fun add(a: Int, b: Int): Int {\n    return a + b\n}",
+          "description": "Define and export the 'add' function."
+        }
+      ]
+    }
   },
   "classes": {
-    "javascript": "class Person {\n    constructor(name) {\n        this.name = name;\n    }\n}",
-    "python": "class Person:\n    def __init__(self, name):\n        self.name = name\n",
-    "java": "public class Person {\n    private String name;\n\n    public Person(String name) {\n        this.name = name;\n    }\n}",
-    "c": "struct Person {\n    char *name;\n};",
-    "cpp": "class Person {\n    private:\n    std::string name;\n\n    public:\n    Person(std::string name) {\n        this->name = name;\n    }\n}",
-    "csharp": "public class Person {\n    private string name;\n\n    public Person(string name) {\n        this.name = name;\n    }\n}",
-    "php": "class Person {\n    private $name;\n\n    public function __construct($name) {\n        $this->name = $name;\n    }\n}",
-    "ruby": "class Person\n    def initialize(name)\n        @name = name\n    end\nend",
-    "go": "type Person struct {\n    name string\n}\n\nfunc NewPerson(name string) *Person {\n    return &Person{name: name}\n}",
-    "rust": "struct Person {\n    name: String\n}\n\nimpl Person {\n    fn new(name: String) -> Person {\n        Person { name }\n    }\n}",
-    "swift": "class Person {\n    private var name: String\n\n    init(name: String) {\n        self._name = name\n    }\n}",
-    "kotlin": "class Person {\n    private val name: String\n\n    constructor(name: String) {\n        this.name = name\n    }\n}"
+    "examples": {
+      "javascript": [
+        {
+          "code": "class Person {\n    constructor(name) {\n        this.name = name;\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "class Employee extends Person {\n    constructor(name, position) {\n        super(name);\n        this.position = position;\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "python": [
+        {
+          "code": "class Person:\n    def __init__(self, name):\n        self.name = name\n",
+          "description": "Define a class 'Person' with an initializer."
+        },
+        {
+          "code": "class Employee(Person):\n    def __init__(self, name, position):\n        super().__init__(name)\n        self.position = position\n",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "java": [
+        {
+          "code": "public class Person {\n    private String name;\n\n    public Person(String name) {\n        this.name = name;\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "public class Employee extends Person {\n    private String position;\n\n    public Employee(String name, String position) {\n        super(name);\n        this.position = position;\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "c": [
+        {
+          "code": "typedef struct Person {\n    char *name;\n} Person;",
+          "description": "Define a struct 'Person' with a name field."
+        },
+        {
+          "code": "typedef struct Employee {\n    Person person;\n    char *position;\n} Employee;",
+          "description": "Define a struct 'Employee' that contains a 'Person' and a position."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "class Person {\n    private:\n    std::string name;\n\n    public:\n    Person(std::string name) {\n        this->name = name;\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "class Employee : public Person {\n    private:\n    std::string position;\n\n    public:\n    Employee(std::string name, std::string position) : Person(name) {\n        this->position = position;\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "public class Person {\n    private string name;\n\n    public Person(string name) {\n        this.name = name;\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "public class Employee : Person {\n    private string position;\n\n    public Employee(string name, string position) : base(name) {\n        this.position = position;\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "php": [
+        {
+          "code": "class Person {\n    private $name;\n\n    public function __construct($name) {\n        $this->name = $name;\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "class Employee extends Person {\n    private $position;\n\n    public function __construct($name, $position) {\n        parent::__construct($name);\n        $this->position = $position;\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "class Person\n    def initialize(name)\n        @name = name\n    end\nend",
+          "description": "Define a class 'Person' with an initializer."
+        },
+        {
+          "code": "class Employee < Person\n    def initialize(name, position)\n        super(name)\n        @position = position\n    end\nend",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "go": [
+        {
+          "code": "type Person struct {\n    name string\n}\n\nfunc NewPerson(name string) *Person {\n    return &Person{name: name}\n}",
+          "description": "Define a struct 'Person' with a name field and a constructor function."
+        },
+        {
+          "code": "type Employee struct {\n    Person\n    position string\n}\n\nfunc NewEmployee(name, position string) *Employee {\n    return &Employee{Person: Person{name: name}, position: position}\n}",
+          "description": "Define a struct 'Employee' that embeds 'Person' and a position, with a constructor function."
+        }
+      ],
+      "rust": [
+        {
+          "code": "struct Person {\n    name: String\n}\n\nimpl Person {\n    fn new(name: String) -> Person {\n        Person { name }\n    }\n}",
+          "description": "Define a struct 'Person' with a name field and an implementation block for methods."
+        },
+        {
+          "code": "struct Employee {\n    person: Person,\n    position: String\n}\n\nimpl Employee {\n    fn new(name: String, position: String) -> Employee {\n        Employee { person: Person::new(name), position }\n    }\n}",
+          "description": "Define a struct 'Employee' that contains 'Person' and a position, with an implementation block for methods."
+        }
+      ],
+      "swift": [
+        {
+          "code": "class Person {\n    private var name: String\n\n    init(name: String) {\n        self.name = name\n    }\n}",
+          "description": "Define a class 'Person' with an initializer."
+        },
+        {
+          "code": "class Employee: Person {\n    private var position: String\n\n    init(name: String, position: String) {\n        self.position = position\n        super.init(name: name)\n    }\n}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "class Person {\n    private val name: String\n\n    constructor(name: String) {\n        this.name = name\n    }\n}",
+          "description": "Define a class 'Person' with a constructor."
+        },
+        {
+          "code": "class Employee(name: String, private val position: String) : Person(name) {}",
+          "description": "Define a class 'Employee' that inherits from 'Person'."
+        }
+      ]
+    }
   }
 }
