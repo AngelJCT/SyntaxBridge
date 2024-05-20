@@ -17,8 +17,14 @@
     "classes": {
       "description": "Classes are blueprints for creating objects in object-oriented programming. They encapsulate data (attributes) and behaviors (methods) into a single entity. This allows for the creation of objects with similar properties and functionality. Classes support principles like inheritance, polymorphism, and encapsulation, which enable the creation of complex and modular code structures that are easier to manage, extend, and debug."
     },
+    "error_handling": {
+      "description": "Error handling is a crucial aspect of programming, ensuring that your program can gracefully handle unexpected situations and errors. It typically involves using structures like try-catch blocks, exception handling, and error codes to manage and respond to runtime errors. Effective error handling improves the robustness and reliability of your code, making it easier to debug and maintain. Different programming languages offer various mechanisms for error handling, such as exceptions in Java and C#, try-except in Python, and Result or Option types in Rust.\n\n**Important:** Always validate user input and anticipate potential errors in your code to prevent crashes and unexpected behavior."
+    },
+    "file_io": {
+      "description": "File I/O (Input/Output) refers to the process of reading from and writing to files. This is an essential aspect of programming that allows programs to persist data, read configurations, and interact with the filesystem. Different programming languages provide various libraries and functions to handle file operations efficiently. Understanding File I/O is crucial for tasks like logging, data processing, and configuration management."
+    },
     "ai": {
-      "description": "The AI feature leverages advanced large language model to provide real-time translation of code snippets. Users can input code in one programming language and receive an equivalent code snippet in another language. This tool is invaluable for developers working with multiple programming languages, as it helps them understand and adapt code across different platforms. The AI model can also assist in providing code suggestions, explanations, and improving overall productivity.\n\n**Important:** Always start your prompt with the following sentence: **Translate to {desired language}**."
+      "description": "The AI feature leverages advanced large language model to provide real-time translation of code snippets. Users can input code in one programming language and receive an equivalent code snippet in another language. This tool is invaluable for developers working with multiple programming languages, as it helps them understand and adapt code across different platforms. The AI model can also assist in providing code suggestions, explanations, and improving overall productivity.\n\n**Important:** Start your prompt with the following sentence: **Translate to {desired language}** or, you can ask to generate code for a specific language."
     }
 }
   

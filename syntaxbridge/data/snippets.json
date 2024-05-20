@@ -742,5 +742,165 @@
         }
       ]
     }
-  }
+  },
+  "error_handling": {
+    "examples": {
+      "javascript": [
+        {
+          "code": "try {\n    // code that may throw an error\n    let result = riskyFunction();\n} catch (error) {\n    console.error(error);\n} finally {\n    console.log('Cleanup code');\n}",
+          "description": "Using try-catch-finally for error handling."
+        }
+      ],
+      "python": [
+        {
+          "code": "try:\n    result = risky_function()\nexcept Exception as e:\n    print(e)\nfinally:\n    print('Cleanup code')",
+          "description": "Using try-except-finally for error handling."
+        }
+      ],
+      "java": [
+        {
+          "code": "try {\n    int result = riskyFunction();\n} catch (Exception e) {\n    e.printStackTrace();\n} finally {\n    System.out.println('Cleanup code');\n}",
+          "description": "Using try-catch-finally for error handling."
+        }
+      ],
+      "c": [
+        {
+          "code": "#include <setjmp.h>\n\njmp_buf buf;\n\nvoid riskyFunction() {\n    if (setjmp(buf)) {\n        printf('Error occurred');\n    } else {\n        longjmp(buf, 1);\n    }\n}",
+          "description": "Using setjmp and longjmp for error handling."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "try {\n    int result = riskyFunction();\n} catch (const std::exception& e) {\n    std::cerr << e.what() << std::endl;\n} finally {\n    std::cout << 'Cleanup code' << std::endl;\n}",
+          "description": "Using try-catch for error handling."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "try {\n    int result = RiskyFunction();\n} catch (Exception e) {\n    Console.WriteLine(e.Message);\n} finally {\n    Console.WriteLine('Cleanup code');\n}",
+          "description": "Using try-catch-finally for error handling."
+        }
+      ],
+      "php": [
+        {
+          "code": "try {\n    $result = riskyFunction();\n} catch (Exception $e) {\n    echo $e->getMessage();\n} finally {\n    echo 'Cleanup code';\n}",
+          "description": "Using try-catch-finally for error handling."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "begin\n    result = risky_function\nrescue => e\n    puts e.message\nensure\n    puts 'Cleanup code'\nend",
+          "description": "Using begin-rescue-ensure for error handling."
+        }
+      ],
+      "go": [
+        {
+          "code": "func riskyFunction() (result int, err error) {\n    defer func() {\n        if r := recover(); r != nil {\n            err = fmt.Errorf('riskyFunction failed: %v', r)\n        }\n    }()\n    panic('something went wrong')\n}",
+          "description": "Using defer and recover for error handling."
+        }
+      ],
+      "rust": [
+        {
+          "code": "fn risky_function() -> Result<i32, String> {\n    if some_condition {\n        Ok(42)\n    } else {\n        Err(String::from('Error occurred'))\n    }\n}",
+          "description": "Using Result for error handling."
+        }
+      ],
+      "swift": [
+        {
+          "code": "do {\n    let result = try riskyFunction()\n} catch {\n    print(error)\n} finally {\n    print('Cleanup code')\n}",
+          "description": "Using do-try-catch for error handling."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "try {\n    val result = riskyFunction()\n} catch (e: Exception) {\n    println(e.message)\n} finally {\n    println('Cleanup code')\n}",
+          "description": "Using try-catch-finally for error handling."
+        }
+      ]
+    }
+  },
+  "file_io": {
+    "examples": {
+      "javascript": [
+        {
+          "code": "const fs = require('fs');\n\nfs.writeFileSync('example.txt', 'Hello, World!');\nconst data = fs.readFileSync('example.txt', 'utf8');\nconsole.log(data);",
+          "description": "Using Node.js fs module to write to and read from a file."
+        },
+        {
+          "code": "const fs = require('fs').promises;\n\nasync function example() {\n  await fs.writeFile('example.txt', 'Hello, World!');\n  const data = await fs.readFile('example.txt', 'utf8');\n  console.log(data);\n}\nexample();",
+          "description": "Using Node.js fs promises API for asynchronous file operations."
+        }
+      ],
+      "python": [
+        {
+          "code": "with open('example.txt', 'w') as file:\n    file.write('Hello, World!')\n\nwith open('example.txt', 'r') as file:\n    data = file.read()\n    print(data)",
+          "description": "Using the built-in open function to write to and read from a file."
+        },
+        {
+          "code": "import os\n\nwith open('example.txt', 'w') as file:\n    file.write('Hello, World!')\n\nwith open('example.txt', 'r') as file:\n    data = file.read()\n    print(data)\n\nos.remove('example.txt')",
+          "description": "Using the os module to handle file operations and delete a file."
+        }
+      ],
+      "java": [
+        {
+          "code": "import java.nio.file.*;\nimport java.io.IOException;\n\npublic class FileIOExample {\n    public static void main(String[] args) {\n        try {\n            Files.writeString(Path.of('example.txt'), 'Hello, World!');\n            String data = Files.readString(Path.of('example.txt'));\n            System.out.println(data);\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "description": "Using java.nio.file.Files to write to and read from a file."
+        }
+      ],
+      "c": [
+        {
+          "code": "#include <stdio.h>\n\nint main() {\n    FILE *file = fopen('example.txt', 'w');\n    if (file) {\n        fputs('Hello, World!', file);\n        fclose(file);\n    }\n    file = fopen('example.txt', 'r');\n    if (file) {\n        char buffer[50];\n        fgets(buffer, 50, file);\n        printf('%s\\n', buffer);\n        fclose(file);\n    }\n    return 0;\n}",
+          "description": "Using the standard I/O library to write to and read from a file."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream outfile('example.txt');\n    outfile << 'Hello, World!' << std::endl;\n    outfile.close();\n\n    std::ifstream infile('example.txt');\n    std::string data;\n    std::getline(infile, data);\n    std::cout << data << std::endl;\n    infile.close();\n    return 0;\n}",
+          "description": "Using fstream to write to and read from a file."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        File.WriteAllText('example.txt', 'Hello, World!');\n        string data = File.ReadAllText('example.txt');\n        Console.WriteLine(data);\n    }\n}",
+          "description": "Using System.IO.File to write to and read from a file."
+        }
+      ],
+      "php": [
+        {
+          "code": "file_put_contents('example.txt', 'Hello, World!');\n$data = file_get_contents('example.txt');\necho $data;",
+          "description": "Using file_put_contents and file_get_contents to write to and read from a file."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "File.write('example.txt', 'Hello, World!')\ndata = File.read('example.txt')\nputs data",
+          "description": "Using File.write and File.read to write to and read from a file."
+        }
+      ],
+      "go": [
+        {
+          "code": "import (\n    'fmt'\n    'io/ioutil'\n)\n\nfunc main() {\n    ioutil.WriteFile('example.txt', []byte('Hello, World!'), 0644)\n    data, _ := ioutil.ReadFile('example.txt')\n    fmt.Println(string(data))\n}",
+          "description": "Using ioutil package to write to and read from a file."
+        }
+      ],
+      "rust": [
+        {
+          "code": "use std::fs;\n\nfn main() {\n    fs::write('example.txt', 'Hello, World!').expect('Unable to write file');\n    let data = fs::read_to_string('example.txt').expect('Unable to read file');\n    println!(\"{}\", data);\n}",
+          "description": "Using std::fs module to write to and read from a file."
+        }
+      ],
+      "swift": [
+        {
+          "code": "import Foundation\n\nlet text = 'Hello, World!'\ntry text.write(toFile: 'example.txt', atomically: true, encoding: .utf8)\nlet data = try String(contentsOfFile: 'example.txt', encoding: .utf8)\nprint(data)",
+          "description": "Using Foundation framework to write to and read from a file."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "import java.io.File\n\nfun main() {\n    File('example.txt').writeText('Hello, World!')\n    val data = File('example.txt').readText()\n    println(data)\n}",
+          "description": "Using java.io.File to write to and read from a file."
+        }
+      ]
+    }
+  }  
 }

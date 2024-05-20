@@ -62,7 +62,7 @@ const Header = () => {
             {/* nav */}
             <Navbar
               containerStyles="hidden lg:flex gap-x-8 items-center tracking-[1px] text-primary"
-              linkStyles="relative hover:text-grey-200 transition-all"
+              linkStyles="relative transition-all"
               underlineStyles="absolute w-full h-[2px] bg-primary top-full left-0"
             />
             <ThemeToggler />

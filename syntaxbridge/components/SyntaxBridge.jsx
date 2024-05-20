@@ -23,6 +23,8 @@ const concepts = [
   { name: "Imports & Exports", value: "imports_exports" },
   { name: "Functions", value: "functions" },
   { name: "Classes", value: "classes" },
+  { name: "Error Handling", value: "error_handling"},
+  { name: "File I/O", value: "file_io"},
   { name: "AI", value: "ai" },
 ]
 
@@ -59,8 +61,8 @@ export default function SyntaxBridge() {
       <div className="w-full mt-8 text-gray-500 dark:text-gray-200 items-center justify-center">
         <p>{mainText}</p>
         {importantText && (
-          <p className="mt-4 text-red-400 font-semibold">
-            <strong>Important:</strong>{importantText}
+          <p className="mt-4 font-semibold tracking-[1px]">
+            <strong className="text-red-400">Important:</strong>{importantText}
           </p>
         )}
       </div>

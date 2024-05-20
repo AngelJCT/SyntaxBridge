@@ -33,14 +33,14 @@ const Navbar = ({
       {links.map((link, index) => {
         return (
           pathname === "/syntaxbridgepage" ? (
-            <Link href="/programming-concepts" className={`capitalize ${linkStyles}`}>
+            <Link href="/programming-concepts" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
               Programming Concepts
             </Link>
           ) : (
             <Link
             href={link.path}
             key={index}
-            className={`capitalize ${linkStyles}`}
+            className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}
           >
             {link.path === pathname && (
               <motion.span
@@ -58,17 +58,18 @@ const Navbar = ({
       })}
       {isSignedIn ? (
         <>
-          <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
-            Log out
-          </SignOutButton>
           {pathname === "/" && (
-            <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles}`}>
-              App
+            <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
+              Playground
             </Link>
           )}
+          <SignOutButton onSignOut={handleSignOut} className={`${linkStyles} dark:text-[#f7f8f8] text-[#26292b] font-medium rounded-xl border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-4`} >
+            Log out
+          </SignOutButton>
+          
         </>
         ) : (
-        <Link href="/sign-in" className={`capitalize ${linkStyles}`}>
+        <Link href="/sign-in" className={`capitalize ${linkStyles} rounded-xl border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-4`}>
           Log in
         </Link>
         )}
