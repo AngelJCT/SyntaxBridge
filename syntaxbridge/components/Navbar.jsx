@@ -61,9 +61,11 @@ const Navbar = ({
           <SignOutButton onSignOut={handleSignOut} className={`capitalize ${linkStyles}`} >
             Log out
           </SignOutButton>
-          <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles}`}>
-            App
-          </Link>
+          {pathname === "/" && (
+            <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles}`}>
+              App
+            </Link>
+          )}
         </>
         ) : (
         <Link href="/sign-in" className={`capitalize ${linkStyles}`}>
