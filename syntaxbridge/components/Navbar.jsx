@@ -63,13 +63,13 @@ const Navbar = ({
               Playground
             </Link>
           )}
-          <SignOutButton onSignOut={handleSignOut} className={`${linkStyles} dark:text-[#f7f8f8] text-[#26292b] font-medium rounded-xl border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-4`} >
+          <SignOutButton onSignOut={handleSignOut} className={`${linkStyles} dark:text-[#f7f8f8] text-[#26292b] rounded-full border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-6 hover:bg-gray-300 dark:hover:bg-gray-600`} >
             Log out
           </SignOutButton>
           
         </>
         ) : (
-        <Link href="/sign-in" className={`capitalize ${linkStyles} rounded-xl border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-4`}>
+        <Link href="/sign-in" className={`capitalize ${linkStyles} rounded-full border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-6 hover:bg-gray-300 dark:hover:bg-gray-600`}>
           Log in
         </Link>
         )}
