@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 const links = [
   {
     name: "Blog",
-    path: "/",
+    path: "/blog",
   },
 ];
 
@@ -58,7 +58,7 @@ const Navbar = ({
       })}
       {isSignedIn ? (
         <>
-          {pathname === "/" && (
+          {(pathname === "/" || pathname === "/blog") && (
             <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
               Playground
             </Link>
