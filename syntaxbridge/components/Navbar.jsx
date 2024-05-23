@@ -63,11 +63,9 @@ const Navbar = ({
       })}
       {isSignedIn ? (
         <>
-          {(pathname === "/" || pathname === "/blog" || pathname === "/programming-concepts") && (
-            <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
-              Playground
-            </Link>
-          )}
+          <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
+            Playground
+          </Link>
           <SignOutButton onSignOut={handleSignOut} className={`${linkStyles} dark:text-[#f7f8f8] text-[#26292b] rounded-full border border-[#26292b15] dark:border-[#b7bdc220] py-2 px-6 hover:bg-gray-300 dark:hover:bg-gray-600`} >
             Log out
           </SignOutButton>
