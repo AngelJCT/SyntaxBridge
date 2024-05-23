@@ -32,10 +32,15 @@ const Navbar = ({
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
         return (
-          pathname === "/syntaxbridgepage" ? (
-            <Link href="/programming-concepts" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
-              Programming Concepts
-            </Link>
+            pathname === "/syntaxbridgepage" ? (
+            <>
+              <Link href="/programming-concepts" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
+                Programming Concepts
+              </Link>
+              <Link href="/blog" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
+                Blog
+              </Link>
+            </>
           ) : (
             <Link
             href={link.path}
@@ -58,7 +63,7 @@ const Navbar = ({
       })}
       {isSignedIn ? (
         <>
-          {(pathname === "/" || pathname === "/blog") && (
+          {(pathname === "/" || pathname === "/blog" || pathname === "/programming-concepts") && (
             <Link href="/syntaxbridgepage" className={`capitalize ${linkStyles} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-[#f7f8f8]`}>
               Playground
             </Link>
