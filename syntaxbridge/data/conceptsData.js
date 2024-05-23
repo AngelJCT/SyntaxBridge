@@ -4,8 +4,8 @@ const conceptsData = {
       title: "Loops",
       description: "Loops are used to execute a block of code repeatedly. Different types of loops include for loops, while loops, and do-while loops.",
       examples: {
-        javascript: "for (let i = 0; i < 10; i++) {\n    console.log(i);\n}",
-        python: "for i in range(10):\n    print(i)",
+        javascript: "JavaScript:\n\nfor (let i = 0; i < 10; i++) {\n    console.log(i);\n}",
+        python: "Python:\n\nfor i in range(10):\n    print(i)",
         // Add more examples for other languages
       },
       common_pitfalls: "Common pitfalls of loops include infinite loops, off-by-one errors, and improper loop initialization.",

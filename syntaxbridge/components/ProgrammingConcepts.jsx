@@ -77,8 +77,8 @@ export default function ProgrammingConcepts() {
                         <h2 className="sm:text-3xl xs:text-xl font-bold mb-4 text-[#26292b] dark:text-[#f7f8f8]">{conceptInfo.title}</h2>
                         <p className="sm:text-lg xs:text-sm mb-4 text-gray-500 dark:text-gray-200">{conceptInfo.description}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Examples:</h3>
-                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden">{conceptInfo.examples?.javascript}</pre>
-                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden">{conceptInfo.examples?.python}</pre>
+                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden border border-[#26292b15] dark:border-none">{conceptInfo.examples?.javascript}</pre>
+                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden border border-[#26292b15] dark:border-none">{conceptInfo.examples?.python}</pre>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Common Pitfalls:</h3>
                         <p className="mb-4 text-gray-500 dark:text-gray-200 sm:text-base xs:text-sm">{conceptInfo.common_pitfalls}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Best Practices:</h3>
