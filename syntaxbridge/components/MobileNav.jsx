@@ -57,7 +57,7 @@ const MobileNav = () => {
               containerStyles="flex flex-col items-center gap-y-6 bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent"
               linkStyles="sm:text-2xl xs:text-sm font-semibold tracking-[1px]"
             />
-            {pathname === "/syntaxbridgepage" && (
+            {(pathname === "/syntaxbridgepage" || pathname === "/programming-concepts") && (
               concepts.map((concept) => (
                 <Link
                   key={concept.name}

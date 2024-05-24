@@ -42,6 +42,7 @@ function CodeIcon(props) {
 export default function ProgrammingConcepts() {
     const {selectedConcept, setSelectedConcept} = useStateContext();
     const [conceptInfo, setConceptInfo] = useState(conceptsData[selectedConcept] || {});
+    const [selectedLanguage, setSelectedLanguage] = useState('javascript');
 
     const handleConceptClick = (concept) => {
         setSelectedConcept(concept);
@@ -69,22 +70,38 @@ export default function ProgrammingConcepts() {
                 </nav>
             </div>
             {/* concept content */}
-            <div className="relative xs:px-[5px] p-6 md:p-8 container mx-auto">
+            <div className="relative xs:px-[5px] p-6 md:p-8 container mx-auto mb-10">
                 <div className="syntaxbridge-gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[55rem] sm:top-[55rem]"></div>
                 <div className="syntaxbridge-gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
                 {conceptInfo ? (
                     <>
                         <h2 className="sm:text-3xl xs:text-xl font-bold mb-4 text-[#26292b] dark:text-[#f7f8f8]">{conceptInfo.title}</h2>
-                        <p className="sm:text-lg xs:text-sm mb-4 text-gray-500 dark:text-gray-200">{conceptInfo.description}</p>
+                        <p className="sm:text-lg xs:text-sm mb-4 text-gray-500 dark:text-gray-300">{conceptInfo.description}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Examples:</h3>
-                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden border border-[#26292b15] dark:border-none">{conceptInfo.examples?.javascript}</pre>
-                        <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-[#f7f8f8] p-2 mb-4 rounded-lg xs:text-sm sm:text-base overflow-hidden border border-[#26292b15] dark:border-none">{conceptInfo.examples?.python}</pre>
+                        {conceptInfo.examples && (
+                            <div>
+                                <div className="flex gap-2 mb-4">
+                                    {Object.keys(conceptInfo.examples).map((language) => (
+                                        <button
+                                            key={language}
+                                            onClick={() => setSelectedLanguage(language)}
+                                            className="px-3 py-1 rounded-lg bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 border border-[#26292b15] dark:border-none"
+                                        >
+                                            {language}
+                                        </button>
+                                    ))}
+                                </div>
+                                <pre className="bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-gray-300 p-4 mb-4 rounded-lg xs:text-[12px] sm:text-base overflow-auto border border-[#26292b15] dark:border-none whitespace-pre-wrap">
+                                    {conceptInfo.examples[selectedLanguage]}
+                                </pre>
+                            </div>
+                        )}
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Common Pitfalls:</h3>
-                        <p className="mb-4 text-gray-500 dark:text-gray-200 sm:text-base xs:text-sm">{conceptInfo.common_pitfalls}</p>
+                        <p className="mb-4 text-gray-500 dark:text-gray-300 sm:text-base xs:text-sm">{conceptInfo.common_pitfalls}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Best Practices:</h3>
-                        <p className="mb-4 text-gray-500 dark:text-gray-200 sm:text-base xs:text-sm">{conceptInfo.best_practices}</p>
+                        <p className="mb-4 text-gray-500 dark:text-gray-300 sm:text-base xs:text-sm">{conceptInfo.best_practices}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Advanced Topics:</h3>
-                        <p className="mb-4 text-gray-500 dark:text-gray-200 sm:text-base xs:text-sm">{conceptInfo.advanced_topics}</p>
+                        <p className="mb-4 text-gray-500 dark:text-gray-300 sm:text-base xs:text-sm">{conceptInfo.advanced_topics}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2">References:</h3>
                         <ul className="list-disc ml-4">
                             {conceptInfo.references?.map((ref, index) => (

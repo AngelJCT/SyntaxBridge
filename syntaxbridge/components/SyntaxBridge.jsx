@@ -25,6 +25,7 @@ const concepts = [
   { name: "Classes", value: "classes" },
   { name: "Error Handling", value: "error_handling"},
   { name: "File I/O", value: "file_io"},
+  { name: "Ternary Expression", value: "ternary_expression"},
   { name: "AI", value: "ai" },
 ]
 
@@ -45,7 +46,7 @@ export default function SyntaxBridge() {
     if (snippets[concept] && snippets[concept].examples && snippets[concept].examples[language]) {
       return snippets[concept].examples[language].map((example, index) => (
         <div key={index} className="mb-4">
-          <pre className="font-mono text-lg dark:text-gray-100 bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] rounded-lg p-2 mb-4">
+          <pre className="w-full font-mono text-lg dark:text-gray-100 bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] rounded-lg p-2 mb-4 whitespace-pre-wrap">
             {example.code}
           </pre>
           <p>{example.description}</p>
@@ -140,7 +141,7 @@ export default function SyntaxBridge() {
                 {renderSnippet(selectedConcept, language1)}
               </div>
             </div>
-            <div className="code-box p-6">
+            <div className="code-box">
               <div className="h-[300px] overflow-auto">
                 {renderSnippet(selectedConcept, language2)}
               </div>

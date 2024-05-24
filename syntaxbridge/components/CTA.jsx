@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -15,9 +16,11 @@ const CTA = () => {
               to streamline learning and mastering multiple languages. Start for free and unlock powerful code comparison and assistance today!
             </p>
 
-            <Button className="gap-x-2 bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-300">
-              Get Started
-            </Button>
+            <Link href="sign-up">
+              <Button className="gap-x-2 bg-[#26292b] dark:bg-[#f7f8f8] text-gray-200 dark:text-gray-800 hover:bg-gray-700 dark:hover:bg-gray-300">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

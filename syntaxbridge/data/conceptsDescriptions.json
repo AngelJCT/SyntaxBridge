@@ -23,6 +23,9 @@
     "file_io": {
       "description": "File I/O (Input/Output) refers to the process of reading from and writing to files. This is an essential aspect of programming that allows programs to persist data, read configurations, and interact with the filesystem. Different programming languages provide various libraries and functions to handle file operations efficiently. Understanding File I/O is crucial for tasks like logging, data processing, and configuration management."
     },
+    "ternary_expression": {
+      "description": "The ternary operator is a concise way to express conditional statements in a single line of code. It evaluates a boolean expression and returns one of two values based on the result. The syntax typically consists of the condition followed by a question mark (?), the value to return if true, a colon (:), and the value to return if false. Ternary expressions are commonly used for simple conditional assignments or to improve code readability by avoiding verbose if-else blocks."
+    },
     "ai": {
       "description": "The AI feature leverages advanced large language model to provide real-time translation of code snippets. Users can input code in one programming language and receive an equivalent code snippet in another language. This tool is invaluable for developers working with multiple programming languages, as it helps them understand and adapt code across different platforms. The AI model can also assist in providing code suggestions, explanations, and improving overall productivity.\n\n**Important:** Start your prompt with the following sentence: **Translate to {desired language}** or, you can ask to generate code for a specific language."
     }

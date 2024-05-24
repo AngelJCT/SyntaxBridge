@@ -902,5 +902,109 @@
         }
       ]
     }
-  }  
+  },
+  "ternary_expression": {
+    "examples": {
+      "javascript": [
+        {
+          "code": "const result = condition ? 'value if true' : 'value if false';",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "const age = 18;\nconst canVote = age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "python": [
+        {
+          "code": "result = 'value if true' if condition else 'value if false'",
+          "description": "Using a ternary expression to assign a value based on a condition."
+        },
+        {
+          "code": "age = 18\ncan_vote = 'Yes' if age >= 18 else 'No'",
+          "description": "Using a ternary expression to determine if someone can vote based on age."
+        }
+      ],
+      "java": [
+        {
+          "code": "String result = condition ? 'value if true' : 'value if false';",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "int age = 18;\nString canVote = age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "c": [
+        {
+          "code": "int result = condition ? value_if_true : value_if_false;",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "int age = 18;\nchar* canVote = age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "cpp": [
+        {
+          "code": "int result = condition ? value_if_true : value_if_false;",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "int age = 18;\nstd::string canVote = age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "csharp": [
+        {
+          "code": "string result = condition ? 'value if true' : 'value if false';",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "int age = 18;\nstring canVote = age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "php": [
+        {
+          "code": "$result = $condition ? 'value if true' : 'value if false';",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "$age = 18;\n$canVote = $age >= 18 ? 'Yes' : 'No';",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "ruby": [
+        {
+          "code": "result = condition ? 'value if true' : 'value if false'",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "age = 18\ncan_vote = age >= 18 ? 'Yes' : 'No'",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "go": [
+        {
+          "code": "result := valueIfTrue\nif condition {\n    result = valueIfFalse\n}",
+          "description": "Using an if statement to assign a value based on a condition."
+        },
+        {
+          "code": "age := 18\ncanVote := \"No\"\nif age >= 18 {\n    canVote = \"Yes\"\n}",
+          "description": "Using an if statement to determine if someone can vote based on age."
+        }
+      ],
+      "rust": [
+        {
+          "code": "let result = if condition { value_if_true } else { value_if_false };",
+          "description": "Using an if expression to assign a value based on a condition"
+        },
+        {
+          "code": "let age = 18;\nlet can_vote = if age >= 18 { \"Yes\" } else { \"No\" };",
+          "description": "Using an if expression to determine if someone can vote based on age."
+        }
+      ]
+    }
+  }
 }

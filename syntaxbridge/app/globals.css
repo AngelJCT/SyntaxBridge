@@ -148,8 +148,8 @@
 }
 
 .feature-card:hover {
-  @apply shadow-2xl;
   animation: pulseAnimation 1.5s infinite;
+  box-shadow: 0 0 30px 0 #8197a8bc;
 }
 
 .code-box {
@@ -332,15 +332,16 @@
 }
 
 .cta-container {
-  @apply py-8 bg-gradient-to-br from-[#eceff2] to-[#8197a8] via-[#d5dde2] dark:bg-[#798189] p-4 rounded-xl xl:rounded-tr-[200px] xl:rounded-bl-[200px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] xs:rounded-tr-[50px] xs:rounded-bl-[50px] dark:bg-gradient-to-br dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] shadow-xl dark:shadow-none;
+  @apply py-8 bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl xl:rounded-tr-[200px] xl:rounded-bl-[200px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] xs:rounded-tr-[50px] xs:rounded-bl-[50px];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-}
-
-.cta-container:hover {
-  transform: scale(1);
   box-shadow: 0 0 30px 0 #8197a8bc;
 }
+
+/* .cta-container:hover {
+  transform: scale(1);
+  box-shadow: 0 0 30px 0 #8197a8bc;
+} */
 
 .dark .shift-gradient {
   animation: float 2s linear infinite;
