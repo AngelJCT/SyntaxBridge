@@ -11,55 +11,55 @@
       }
 
       .cls-2 {
-        filter: url(#drop-shadow-8);
-      }
-
-      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
-        fill: #edeff1;
-      }
-
-      .cls-3 {
-        filter: url(#drop-shadow-5);
-      }
-
-      .cls-4 {
-        filter: url(#drop-shadow-3);
-      }
-
-      .cls-5 {
-        filter: url(#drop-shadow-2);
-      }
-
-      .cls-6 {
-        filter: url(#drop-shadow-6);
-      }
-
-      .cls-7 {
-        filter: url(#drop-shadow-7);
-      }
-
-      .cls-8 {
-        filter: url(#drop-shadow-4);
-      }
-
-      .cls-9 {
         fill: url(#linear-gradient-2);
         filter: url(#drop-shadow-1);
       }
+
+      .cls-3 {
+        filter: url(#drop-shadow-7);
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: #394753;
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-5);
+      }
+
+      .cls-5 {
+        filter: url(#drop-shadow-4);
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-7 {
+        filter: url(#drop-shadow-6);
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-8);
+      }
+
+      .cls-9 {
+        filter: url(#drop-shadow-2);
+      }
     </style>
     <linearGradient id="linear-gradient" x1="97.25" y1="0" x2="97.25" y2="194.5" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#d5dde2"/>
-      <stop offset=".18" stop-color="#c6d1d7"/>
-      <stop offset=".53" stop-color="#a1b2bc"/>
-      <stop offset="1" stop-color="#668091"/>
-    </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="97.25" y1="33.4" x2="97.25" y2="161.1" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#516878"/>
       <stop offset=".23" stop-color="#4e6474"/>
       <stop offset=".47" stop-color="#465a68"/>
       <stop offset=".7" stop-color="#394854"/>
       <stop offset=".93" stop-color="#273038"/>
       <stop offset="1" stop-color="#22292f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="97.25" y1="33.4" x2="97.25" y2="161.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d5dde2"/>
+      <stop offset=".18" stop-color="#c6d1d7"/>
+      <stop offset=".53" stop-color="#a1b2bc"/>
+      <stop offset="1" stop-color="#668091"/>
     </linearGradient>
     <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
       <feOffset dx="2" dy="5"/>
@@ -120,13 +120,13 @@
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
     <rect class="cls-1" width="194.5" height="194.5" rx="26.32" ry="26.32"/>
-    <circle class="cls-9" cx="97.25" cy="97.25" r="63.85"/>
-    <circle class="cls-5" cx="73.17" cy="71.48" r="8.04"/>
-    <circle class="cls-4" cx="121.27" cy="71.48" r="8.04"/>
-    <circle class="cls-8" cx="73.17" cy="124.57" r="8.04"/>
-    <circle class="cls-3" cx="121.27" cy="124.57" r="8.04"/>
-    <path class="cls-6" d="M70.55,89.02l54.31.26c4.87.02,8.8,3.98,8.8,8.84h0c0,4.93-4.01,8.93-8.95,8.91l-53.39-.26c-5.13-.04-9.26-4.21-9.26-9.34h0c0-4.67,3.81-8.45,8.48-8.41Z"/>
-    <polygon class="cls-7" points="91.33 124.78 106.78 132.93 91.33 141.09 91.33 138.25 102.28 132.89 91.33 127.61 91.33 124.78"/>
-    <polygon class="cls-2" points="105.59 55.29 90.14 63.44 105.59 71.6 105.59 68.76 94.64 63.4 105.59 58.12 105.59 55.29"/>
+    <circle class="cls-2" cx="97.25" cy="97.25" r="63.85"/>
+    <circle class="cls-9" cx="73.17" cy="71.48" r="8.04"/>
+    <circle class="cls-6" cx="121.27" cy="71.48" r="8.04"/>
+    <circle class="cls-5" cx="73.17" cy="124.57" r="8.04"/>
+    <circle class="cls-4" cx="121.27" cy="124.57" r="8.04"/>
+    <path class="cls-7" d="M70.55,89.02l54.31.26c4.87.02,8.8,3.98,8.8,8.84h0c0,4.93-4.01,8.93-8.95,8.91l-53.39-.26c-5.13-.04-9.26-4.21-9.26-9.34h0c0-4.67,3.81-8.45,8.48-8.41Z"/>
+    <polygon class="cls-3" points="91.33 124.78 106.78 132.93 91.33 141.09 91.33 138.25 102.28 132.89 91.33 127.61 91.33 124.78"/>
+    <polygon class="cls-8" points="105.59 55.29 90.14 63.44 105.59 71.6 105.59 68.76 94.64 63.4 105.59 58.12 105.59 55.29"/>
   </g>
 </svg>

@@ -32,20 +32,18 @@ const Logo = () => {
   return (
     <Link href="/">
       <h1 className="bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent font-semibold hover:underline tracking-[1px] cursor-pointer">
-        {/* <Image
+        <Image
           src={
             currentTheme === "light"
-              ? "/SVG/logo_light_7.svg"
-              : "/SVG/logo_dark_8.svg"
+              ? "/SVG/logo_light.svg"
+              : "/SVG/logo_dark.svg"
           }
           alt="logo"
           width={50}
           height={50}
           className="cursor-pointer"
           priority
-        /> */}
-        {/* <span>ANGEL</span> */}
-        Syntax<span className="font-normal">Bridge</span>
+        />
       </h1>
     </Link>
   );
