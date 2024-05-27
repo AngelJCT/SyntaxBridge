@@ -15,6 +15,7 @@ import snippets from "@/data/snippets.json";
 import descriptions from "@/data/conceptsDescriptions.json"
 import { useStateContext } from "@/context/StateContext";
 import AIComponent from "./AIComponent";
+import CodeIcon from "@/utils/CodeIcon";
 
 const concepts = [
   { name: "Loops", value: "loops" },
@@ -80,7 +81,7 @@ export default function SyntaxBridge() {
           </h1>
           {concepts.map((concept) => (
             <Link
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"
+              className="flex items-center gap-3 rounded-lg p-2 text-[18px] leading-[28px] text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600 focus:bg-gray-300 dark:focus:bg-gray-600"
               href="#"
               onClick={() => handleConceptClick(concept.value)}
             >
@@ -152,25 +153,5 @@ export default function SyntaxBridge() {
       </div>
       </div>
     </div>
-  );
-}
-
-function CodeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-    </svg>
   );
 }

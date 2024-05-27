@@ -390,3 +390,8 @@
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+
+.fixed-size-icon {
+  width: 20px;
+  height: 20px;
+}

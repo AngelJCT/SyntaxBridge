@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import { useStateContext } from "@/context/StateContext";
 import conceptsData from "@/data/conceptsData";
-
+import CodeIcon from "@/utils/CodeIcon";
 
 const concepts = [
   { name: "Loops", value: "loops" },
@@ -15,39 +15,21 @@ const concepts = [
   { name: "Classes", value: "classes" },
   { name: "Error Handling", value: "error_handling"},
   { name: "File I/O", value: "file_io"},
-  { name: "AI", value: "ai" },
+  { name: "Ternary Expression", value: "ternary_expression"},
 ]
 
-function CodeIcon(props) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <polyline points="16 18 22 12 16 6" />
-        <polyline points="8 6 2 12 8 18" />
-      </svg>
-    );
-  }
-
-
 export default function ProgrammingConcepts() {
-    const {selectedConcept, setSelectedConcept} = useStateContext();
+    const {selectedConcept, setSelectedConcept, handleConceptClick} = useStateContext();
     const [conceptInfo, setConceptInfo] = useState(conceptsData[selectedConcept] || {});
     const [selectedLanguage, setSelectedLanguage] = useState('javascript');
 
-    const handleConceptClick = (concept) => {
-        setSelectedConcept(concept);
-        setConceptInfo(conceptsData[concept] || {})
-    };
+    // This useEffect hook runs whenever the selectedConcept state changes.
+    // It updates the conceptInfo state with the details of the newly selected concept
+    // from the conceptsData. This ensures that the component re-renders with the
+    // latest information whenever a new concept is selected.
+    useEffect(() => {
+        setConceptInfo(conceptsData[selectedConcept] || {});
+    }, [selectedConcept]);
 
     return (
         <div className="syntaxbridge-gradient flex min-h-screen">
@@ -59,11 +41,11 @@ export default function ProgrammingConcepts() {
                     </h1>
                     {concepts.map((concept) => (
                         <Link
-                            className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"
+                            className="flex items-center gap-3 rounded-lg p-2 text-[18px] leading-[28px] text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600 focus:bg-gray-300 dark:focus:bg-gray-600"
                             href="#"
                             onClick={() => handleConceptClick(concept.value)}
                         >
-                            <CodeIcon className="h-5 w-5" />
+                            <CodeIcon className="h-5 w-5 fixed-size-icon" />
                             {concept.name}
                         </Link>
                     ))}
@@ -80,12 +62,12 @@ export default function ProgrammingConcepts() {
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Examples:</h3>
                         {conceptInfo.examples && (
                             <div>
-                                <div className="flex gap-2 mb-4">
+                                <div className="grid md:grid-cols-5 xs:grid-cols-3 gap-x-4 gap-y-4 mb-4">
                                     {Object.keys(conceptInfo.examples).map((language) => (
                                         <button
                                             key={language}
                                             onClick={() => setSelectedLanguage(language)}
-                                            className="px-3 py-1 rounded-lg bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 border border-[#26292b15] dark:border-none"
+                                            className="px-3 py-2 rounded-lg bg-[#d5dde2] bg-opacity-40 dark:bg-[#798189] dark:bg-opacity-10 backdrop-blur-[4px] text-[#26292b] dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 border border-[#26292b15] dark:border-none"
                                         >
                                             {language}
                                         </button>
@@ -102,16 +84,20 @@ export default function ProgrammingConcepts() {
                         <p className="mb-4 text-gray-500 dark:text-gray-300 sm:text-base xs:text-sm">{conceptInfo.best_practices}</p>
                         <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2 text-[#26292b] dark:text-[#f7f8f8]">Advanced Topics:</h3>
                         <p className="mb-4 text-gray-500 dark:text-gray-300 sm:text-base xs:text-sm">{conceptInfo.advanced_topics}</p>
-                        <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2">References:</h3>
-                        <ul className="list-disc ml-4">
-                            {conceptInfo.references?.map((ref, index) => (
-                                <li key={index}>
-                                    <a href={ref} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline sm:text-base xs:text-[10px]">
-                                        {ref}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                        {conceptInfo.references && conceptInfo.references.length > 0 && (
+                            <>
+                                <h3 className="sm:text-2xl xs:text-lg font-semibold mb-2">References:</h3>
+                                <ul className="list-disc ml-4">
+                                    {conceptInfo.references.map((ref, index) => (
+                                        <li key={index}>
+                                            <a href={ref} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline sm:text-base xs:text-[10px] whitespace-pre-wrap">
+                                                {ref}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        )}
                     </>
                 ) : (
                     <p>Select a concept to view its details.</p>

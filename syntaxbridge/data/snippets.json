@@ -1004,6 +1004,26 @@
           "code": "let age = 18;\nlet can_vote = if age >= 18 { \"Yes\" } else { \"No\" };",
           "description": "Using an if expression to determine if someone can vote based on age."
         }
+      ],
+      "swift": [
+        {
+          "code": "let result = condition ? 'value if true' : 'value if false'",
+          "description": "Using a ternary operator to assign a value based on a condition."
+        },
+        {
+          "code": "let age = 18\nlet canVote = age >= 18 ? 'Yes' : 'No'",
+          "description": "Using a ternary operator to determine if someone can vote based on age."
+        }
+      ],
+      "kotlin": [
+        {
+          "code": "val result = if (condition) 'value if true' else 'value if false'",
+          "description": "Using an if expression to assign a value based on a condition."
+        },
+        {
+          "code": "val age = 18\nval canVote = if (age >= 18) 'Yes' else 'No'",
+          "description": "Using an if expression to determine if someone can vote based on age."
+        }
       ]
     }
   }

@@ -6,29 +6,11 @@ import { AlignJustify } from "lucide-react";
 import { useStateContext } from "@/context/StateContext";
 
 import Navbar from "./Navbar";
+import CodeIcon from "@/utils/CodeIcon";
 import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function CodeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-    </svg>
-  );
-}
 
 const concepts = [
   { name: "Loops", value: "loops" },
@@ -37,12 +19,24 @@ const concepts = [
   { name: "Imports & Exports", value: "imports_exports" },
   { name: "Functions", value: "functions" },
   { name: "Classes", value: "classes" },
+  { name: "Error Handling", value: "error_handling" },
+  { name: "File I/O", value: "file_io" },
+  { name: "Ternary Expression", value: "ternary_expression" },
   { name: "AI", value: "ai" },
 ];
 
 const MobileNav = () => {
   const { selectedConcept, handleConceptClick } = useStateContext();
   const pathname = usePathname();
+
+  const filteredConcepts = concepts.filter(concept => {
+    if (pathname === "/syntaxbridgepage") {
+      return true; // Show all concepts
+    } else if (pathname === "/programming-concepts") {
+      return concept.value !== "ai"; // Exclude the "AI" concept
+    }
+    return false;
+  })
   
   return (
     <Sheet>
@@ -58,10 +52,10 @@ const MobileNav = () => {
               linkStyles="sm:text-2xl xs:text-sm font-semibold tracking-[1px]"
             />
             {(pathname === "/syntaxbridgepage" || pathname === "/programming-concepts") && (
-              concepts.map((concept) => (
+              filteredConcepts.map((concept) => (
                 <Link
                   key={concept.name}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 text-xl text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600"
+                  className="flex items-center gap-3 rounded-lg p-2 text-[18px] leading-[28px] text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600 focus:bg-gray-300 dark:focus:bg-gray-600"
                   href="#"
                   onClick={() => handleConceptClick(concept.value)}
                 >
