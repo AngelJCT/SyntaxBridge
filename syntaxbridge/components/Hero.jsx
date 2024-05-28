@@ -76,16 +76,16 @@ const Hero = () => {
           animate="visible"
           variants={containerVariants}
         >
-          {["Python", "Java", "JavaScript", "Rust"].map((lang, index) => (
+          {["Python", "C", "JavaScript", "Rust"].map((lang, index) => (
             <motion.div
               key={index}
-              className={`${lang.toLowerCase()}-container py-3 px-3 text-center items-center justify-center text-[#26292b] dark:text-[#f7f8f8]`}
+              className={`${lang.toLowerCase()}-container py-3 px-3 text-center items-center justify-center text-[#26292b] dark:text-[#f7f8f8] flex-auto`}
               variants={itemVariants}
             >
               <h3 className="font-semibold xs:text-sm sm:text-lg mb-3">{lang}</h3>
               <pre className="font-mono xs:text-sm sm:text-lg text-gray-600 dark:text-gray-400">
                 {lang === "Python" && 'print("Hello, World!")'}
-                {lang === "Java" && 'System.out.println("Hello, World!");'}
+                {lang === "C" && 'printf("Hello, World!");'}
                 {lang === "JavaScript" && 'console.log("Hello, World!");'}
                 {lang === "Rust" && 'println!("Hello, World!");'}
               </pre>
