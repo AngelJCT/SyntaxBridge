@@ -71,7 +71,7 @@ const Hero = () => {
 
         {/* Code Snippets Containers */}
         <motion.div
-          className="flex flex-col xl:flex-row gap-x-3 gap-y-5 xl:gap-y-0 items-center mb-10 sm:mb-0"
+          className="flex flex-col lg:flex-row gap-x-3 gap-y-5 xl:gap-y-0 items-center mb-10 sm:mb-0"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
