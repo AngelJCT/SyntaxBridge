@@ -140,7 +140,7 @@
   -webkit-backdrop-filter: blur(3px);
 }
 .feature-title {
-  @apply sm:text-2xl xs:text-lg tracking-[1px] font-semibold text-[#26292b] dark:text-[#f7f8f8] mb-5;
+  @apply sm:text-xl xs:text-lg font-semibold text-[#26292b] dark:text-[#f7f8f8] mb-5;
 }
 
 .feature-description {
