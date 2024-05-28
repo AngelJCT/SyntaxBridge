@@ -27,16 +27,16 @@ const Logo = () => {
   const { theme, resolvedTheme } = useTheme();
 
   // Use resolvedTheme if available, otherwise default to 'light'
-  const currentTheme = resolvedTheme || "light";
+  const currentTheme = resolvedTheme || "dark";
 
   return (
     <Link href="/">
-      <h1 className="bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent font-semibold hover:underline tracking-[1px] cursor-pointer">
+      
         <Image
           src={
             currentTheme === "light"
-              ? "/SVG/logo_light.svg"
-              : "/SVG/logo_dark.svg"
+              ? "/SVG/logo2_light.svg"
+              : "/SVG/logo2_dark.svg"
           }
           alt="logo"
           width={50}
@@ -44,7 +44,6 @@ const Logo = () => {
           className="cursor-pointer"
           priority
         />
-      </h1>
     </Link>
   );
 };
