@@ -41,6 +41,7 @@ export default function ProgrammingConcepts() {
                     </h1>
                     {concepts.map((concept) => (
                         <Link
+                            key={concept.name}
                             className="flex items-center gap-3 rounded-lg p-2 text-[18px] leading-[28px] text-gray-700 transition-all hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-50 hover:bg-gray-300 dark:hover:bg-gray-600 focus:bg-gray-300 dark:focus:bg-gray-600"
                             href="#"
                             onClick={() => handleConceptClick(concept.value)}
