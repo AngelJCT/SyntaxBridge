@@ -119,19 +119,19 @@
 }
 
 .python-container {
-  @apply sm:w-[300px] sm:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+  @apply md:w-[300px] md:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .java-container {
-  @apply sm:w-[420px] sm:h-[100px] xs:w-[340px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+  @apply md:w-[420px] md:h-[100px] xs:w-[340px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .javascript-container {
-  @apply sm:w-[350px] sm:h-[100px] xs:w-[290px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+  @apply md:w-[350px] md:h-[100px] xs:w-[290px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .rust-container {
-  @apply sm:w-[300px] sm:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+  @apply md:w-[300px] md:h-[100px] xs:w-[240px] xs:h-[80px] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .feature-card {
