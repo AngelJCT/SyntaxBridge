@@ -82,8 +82,8 @@ const Hero = () => {
               className={`${lang.toLowerCase()}-container py-3 px-3 text-center items-center justify-center text-[#26292b] dark:text-[#f7f8f8] flex-auto`}
               variants={itemVariants}
             >
-              <h3 className="font-semibold xs:text-sm sm:text-lg mb-3">{lang}</h3>
-              <pre className="font-mono xs:text-sm sm:text-lg text-gray-600 dark:text-gray-400">
+              <h3 className="font-semibold xs:text-sm lg:text-lg sm:text-base mb-3">{lang}</h3>
+              <pre className="font-mono xs:text-sm lg:text-lg sm:text-base text-gray-600 dark:text-gray-400">
                 {lang === "Python" && 'print("Hello, World!")'}
                 {lang === "C" && 'printf("Hello, World!");'}
                 {lang === "JavaScript" && 'console.log("Hello, World!");'}
