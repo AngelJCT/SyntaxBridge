@@ -6,34 +6,36 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 
 const Hero = () => {
-    const containerVariants = {
-      hidden: { opacity: 0, y: 50 },
-      visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: "spring",
-          stiffness: 100,
-          damping: 10,
-          staggerChildren: 0.6,
-          duration: 1.5,
-        },
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+        staggerChildren: 0.6,
+        duration: 1.5,
       },
-    };
-  
-    const itemVariants = {
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0, transition: { duration: 1.7, } },
-    };
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.7 } },
+  };
 
   return (
     <section className="z-10 py-12 xl:py-24 sm:h-[65vh] xs:h-[100hv] lg:pt-[70px] sm:pt-[100px] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] md:rounded-b-[130px] sm:rounded-b-[100px] xs:rounded-b-[70px] shadow-2xl drop-shadow-lg dark:shadow-none">
       <div className="container xs:px-[1rem] mx-auto relative">
-      <motion.div className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10"
+        <motion.div
+          className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10"
           initial="hidden"
           animate="visible"
-          variants={containerVariants}>
-      <motion.h1
+          variants={containerVariants}
+        >
+          <motion.h1
             className="mb-4 xl:p-2 font-bold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] bg-gradient-to-l from-[#5c656d] to-[#26292b] tracking-[2px] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent"
             variants={itemVariants}
           >
@@ -71,7 +73,7 @@ const Hero = () => {
 
         {/* Code Snippets Containers */}
         <motion.div
-          className="flex flex-col lg:flex-row gap-x-3 gap-y-5 xl:gap-y-0 items-center mb-10 sm:mb-0"
+          className="flex flex-col lg:flex-row gap-x-3 gap-y-5 xl:gap-y-0 items-center mb-10"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -83,7 +85,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               <h3 className="font-semibold xs:text-sm lg:text-lg sm:text-base mb-3">{lang}</h3>
-              <pre className="font-mono xs:text-sm lg:text-lg sm:text-base text-gray-600 dark:text-gray-400">
+              <pre className="font-mono xs:text-sm lg:text-lg md:text-base text-gray-600 dark:text-gray-400">
                 {lang === "Python" && 'print("Hello, World!")'}
                 {lang === "C" && 'printf("Hello, World!");'}
                 {lang === "JavaScript" && 'console.log("Hello, World!");'}
