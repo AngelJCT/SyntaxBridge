@@ -1,5 +1,9 @@
+"use client"
+
 import { Code } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function CodeIcon(props) {
   return (
@@ -23,8 +27,34 @@ function CodeIcon(props) {
 }
 
 const About = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2, // Adjust duration for slower animation
+      },
+    },
+  }
+  
   return (
-    <section className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]">
+    <motion.section
+      className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]" 
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+    >
       <div className="container xs:px-[1rem] mx-auto relative">
         <div className="gradient-ball-1 -z-10 absolute lg:top-[25rem] md:top-[40rem] xs:top-[83rem] sm:top-[75rem]"></div>
         <div className="gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
@@ -81,7 +111,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

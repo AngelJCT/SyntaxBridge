@@ -1,8 +1,40 @@
+"use client"
+
+import { motion } from 'framer-motion'
 import React from 'react'
+import { useEffect } from 'react'
+import { useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const PurposeSection = () => {
+    const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2, // Adjust duration for slower animation
+      },
+    },
+  }
+  
   return (
-    <section className="py-12 xl:py-[130px] lg:py-[90px] xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] items-center bg-opacity-15 dark:bg-opacity-20">
+    <motion.section
+        className="py-12 xl:py-[130px] lg:py-[90px] xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] items-center bg-opacity-15 dark:bg-opacity-20"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={variants}
+    >
         <div className='container xs:px-[1rem] mx-auto relative'>
             <div className="gradient-ball-purpose -z-10 absolute xl:top-[9rem] lg:top-[5rem] md:top-[1rem] xs:top-[4rem] sm:top-[2rem] xl:left-[500px] lg:left-[300px] md:left-[170px] sm:left-[130px] xs:left-[1px]"></div>
             <div className="relative z-1 max-w-[62rem] mx-auto text-left mb-8 md:mb-12">
@@ -26,7 +58,7 @@ const PurposeSection = () => {
                 </p>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 
