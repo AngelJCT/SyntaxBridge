@@ -10,8 +10,8 @@ function CodeIcon(props) {
     <svg
       {...props}
       xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
+      width="60"
+      height="60"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -45,11 +45,11 @@ const About = () => {
         duration: 2, // Adjust duration for slower animation
       },
     },
-  }
-  
+  };
+
   return (
     <motion.section
-      className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]" 
+      className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]"
       ref={ref}
       initial="hidden"
       animate={controls}
@@ -67,48 +67,34 @@ const About = () => {
 
         {/* About Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="feature-card">
-            <h3 className="feature-title">Compare Code Side-by-Side</h3>
-            <p className="feature-description">
-              Visualize differences and similarities in syntax across multiple
-              programming languages with our intuitive side-by-side display.
-            </p>
-            <div className="absolute xl:right-[145px] lg:right-[95px] md:right-[155px] sm:right-[280px] xs:right-[120px]">
-              <CodeIcon />
+          {[
+            {
+              title: "Compare Code Side-by-Side",
+              description: "Visualize differences and similarities in syntax across multiple programming languages with our intuitive side-by-side display."
+            },
+            {
+              title: "Choose from a Dozen Languages",
+              description: "Access a diverse library of 12 popular programming languages, enabling you to learn and compare their syntax effectively."
+            },
+            {
+              title: "Your AI Coding Assistant",
+              description: "Leverage artificial intelligence to get real-time suggestions, corrections and explanations to enhance your coding skills."
+            },
+            {
+              title: "Insights into Every Programming Concept",
+              description: "Gain comprehensive insights and detailed explanations for a wide range of programming concepts to deepen your understanding."
+            },
+          ].map((feature, index) => (
+            <div key={index} className="feature-card">
+              <div>
+                <h3 className="feature-title">{feature.title}</h3>
+                <p className="feature-description">{feature.description}</p>
+              </div>
+              <div className="justify-center absolute bottom-0">
+                <CodeIcon />
+              </div>
             </div>
-          </div>
-          <div className="feature-card">
-            <h3 className="feature-title">Choose from a Dozen Languages</h3>
-            <p className="feature-description">
-              Access a diverse library of 12 popular programming languages,
-              enabling you to learn and compare their syntax effectively.
-            </p>
-            <div className="absolute xl:right-[145px] lg:right-[95px] md:right-[155px] sm:right-[280px] xs:right-[120px]">
-              <CodeIcon />
-            </div>
-          </div>
-          <div className="feature-card">
-            <h3 className="feature-title">Your AI Coding Assistant</h3>
-            <p className="feature-description">
-              Leverage artificial intelligence to get real-time suggestions,
-              corrections and explanations to enhance your coding skills.
-            </p>
-            <div className="absolute xl:right-[145px] lg:right-[95px] md:right-[155px] sm:right-[280px] xs:right-[120px]">
-              <CodeIcon />
-            </div>
-          </div>
-          <div className="feature-card">
-            <h3 className="feature-title">
-              Insights into Every Programming Concept
-            </h3>
-            <p className="feature-description">
-              Gain comprehensive insights and detailed explanations for a wide
-              range of programming concepts to deepen your understanding.
-            </p>
-            <div className="absolute xl:right-[145px] lg:right-[95px] md:right-[155px] sm:right-[280px] xs:right-[120px]">
-              <CodeIcon />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </motion.section>
