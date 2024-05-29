@@ -29,13 +29,13 @@ const PurposeSection = () => {
   
   return (
     <motion.section
-        className="py-12 xl:py-[130px] lg:py-[90px] xl:h-[65vh] xs:h-[100hv] items-center bg-opacity-15 dark:bg-opacity-20"
+        className="py-12 flex xl:py-[130px] lg:py-[90px] xl:h-[65vh] xs:h-[100hv] items-center bg-opacity-15 dark:bg-opacity-20"
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={variants}
     >
-        <div className='container mx-auto'>
+        <div className='container mx-auto w-full xs:px-[1rem]'>
           <div className='relative'>
             <div className="gradient-ball-purpose -z-10 absolute xl:top-[9rem] lg:top-[5rem] md:top-[1rem] xs:top-[4rem] sm:top-[2rem] xl:left-[500px] lg:left-[300px] md:left-[170px] sm:left-[130px] xs:left-[1px]"></div>
           </div>

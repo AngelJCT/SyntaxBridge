@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <section className="z-10 py-12 xl:py-[100px] xl:h-[65vh] xs:h-[100hv] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] md:rounded-b-[130px] sm:rounded-b-[100px] xs:rounded-b-[70px] shadow-2xl drop-shadow-lg dark:shadow-none">
-      <div className="container mx-auto">
+      <div className="container mx-auto w-full xs:px-[1rem]">
         <motion.div
           className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10"
           initial="hidden"
@@ -60,7 +60,7 @@ const Hero = () => {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-col md:flex-row gap-x-4 gap-y-4 mx-auto items-center justify-center"
+            className="flex mx-auto items-center justify-center"
             variants={itemVariants}
           >
             <Link href="sign-up">

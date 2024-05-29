@@ -8,7 +8,7 @@ import PurposeSection from "@/components/PurposeSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <About />
       <PurposeSection />

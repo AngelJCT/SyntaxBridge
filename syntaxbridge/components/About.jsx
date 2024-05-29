@@ -55,7 +55,7 @@ const About = () => {
       animate={controls}
       variants={variants}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto w-full xs:px-[1rem]">
         <div className="relative">
           <div className="gradient-ball-1 -z-10 absolute lg:top-[25rem] md:top-[40rem] xs:top-[83rem] sm:top-[75rem]"></div>
           <div className="gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
