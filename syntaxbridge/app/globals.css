@@ -118,20 +118,11 @@
   animation: pulseAnimation 1.5s infinite;
 }
 
-.python-container {
-  @apply flex-auto p-4 w-full sm:w-[70%] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
-}
-
-.c-container {
-  @apply flex-auto p-4 w-full sm:w-[70%] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
-}
-
-.javascript-container {
-  @apply flex-auto p-4 w-full sm:w-[70%] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
-}
-
+.python-container,
+.c-container,
+.javascript-container,
 .rust-container {
-  @apply flex-auto p-4 w-full sm:w-[70%] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
+  @apply flex-auto p-4 w-full lg:w-[50%] sm:w-[60%] bg-transparent backdrop-blur-[4px] dark:bg-transparent dark:backdrop-blur-[4px] shadow-sm dark:shadow-none rounded-xl border border-[#26292b15] dark:border dark:border-[#b7bdc220];
 }
 
 .feature-card {
