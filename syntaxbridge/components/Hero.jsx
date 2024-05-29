@@ -27,8 +27,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="z-10 py-12 xl:py-24 xl:h-[65vh] xs:h-[100hv] lg:pt-[70px] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] md:rounded-b-[130px] sm:rounded-b-[100px] xs:rounded-b-[70px] shadow-2xl drop-shadow-lg dark:shadow-none">
-      <div className="container xs:px-[1rem] mx-auto relative">
+    <section className="z-10 py-12 xl:py-[100px] xl:h-[65vh] xs:h-[100hv] bg-gradient-to-b from-[#eceff2] via-[#d5dde2] to-[#8197a8] dark:bg-gradient-to-b dark:from-[#0f0f12] dark:via-[#1d1f25] dark:to-[#393d41] md:rounded-b-[130px] sm:rounded-b-[100px] xs:rounded-b-[70px] shadow-2xl drop-shadow-lg dark:shadow-none">
+      <div className="container mx-auto">
         <motion.div
           className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-10"
           initial="hidden"

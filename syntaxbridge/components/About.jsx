@@ -49,15 +49,18 @@ const About = () => {
 
   return (
     <motion.section
-      className="py-12 xl:py-24 xl:h-[65vh] lg:h-[50vh] xs:h-[100hv] xl:pt-[200px] lg:pt-[120px]"
+      className="py-12 xl:py-[100px] xl:h-[65vh] xs:h-[100hv] border-b"
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
     >
-      <div className="container xs:px-[1rem] mx-auto relative">
-        <div className="gradient-ball-1 -z-10 absolute lg:top-[25rem] md:top-[40rem] xs:top-[83rem] sm:top-[75rem]"></div>
-        <div className="gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
+      <div className="container mx-auto">
+        <div className="relative">
+          <div className="gradient-ball-1 -z-10 absolute lg:top-[25rem] md:top-[40rem] xs:top-[83rem] sm:top-[75rem]"></div>
+          <div className="gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
+        </div>
+        
         {/* <div className="gradient-ball-3 -z-10 absolute md:top-[17rem] xs:top-[50rem] xs:right-[80px] sm:right-[230px] md:right-[600px]"></div> */}
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-8 md:mb-12">
           <h2 className="text-[1.5rem] leading-[2.5rem] md:text-[1.75rem] md:leading-[2.5rem] lg:text-[2rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight max-w-3xl mx-auto mb-6 tracking-[2px] font-medium bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
