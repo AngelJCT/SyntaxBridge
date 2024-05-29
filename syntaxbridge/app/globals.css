@@ -111,7 +111,7 @@
 }
 
 .python-container:hover,
-.java-container:hover,
+.c-container:hover,
 .javascript-container:hover,
 .rust-container:hover {
   @apply shadow-xl;
