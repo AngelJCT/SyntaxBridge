@@ -36,7 +36,6 @@ export default function SyntaxBridge() {
 
   useEffect(() => {
     setDescription(descriptions[selectedConcept]?.description || '');
-  
   }, [selectedConcept])
 
   const handleConceptClick = (concept) => {
@@ -73,7 +72,7 @@ export default function SyntaxBridge() {
 
   return (
     <div className="syntaxbridge-gradient flex min-h-screen">
-    {/* concepts nav */}
+      {/* concepts nav */}
       <div className="syntax-bridge-nav hidden w-[280px] p-6 lg:block">
         <nav className="grid gap-4">
           <h1 className="flex items-center gap-3 rounded-lg px-3 py-2 text-2xl font-semibold tracking-[1px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
@@ -95,63 +94,61 @@ export default function SyntaxBridge() {
 
       <div className="container mx-auto relative xs:px-[5px]">
         {/* main page */}
-      <div className="flex-1 xs:py-6 md:p-8">
-      <div className="syntaxbridge-gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[55rem] sm:top-[55rem]"></div>
-      <div className="syntaxbridge-gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
-        <div className="flex flex-col items-center justify-between text-center">
-          <h1 className="text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] font-bold md:mb-10 xs:mb-8 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
+        <div className="flex-1 xs:py-6 md:p-8 mb-6">
+          <div className="syntaxbridge-gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[55rem] sm:top-[55rem]"></div>
+          <div className="syntaxbridge-gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
+          <div className="flex flex-col items-center justify-between text-center">
+            <h1 className="text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] font-bold md:mb-10 xs:mb-8 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
               Syntax<span className="font-normal">Bridge</span>
-          </h1>
-          {/* <h2 className="text-[1.5rem] leading-[2.5rem] md:text-[1.75rem] md:leading-[2.5rem] lg:text-[2rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight max-w-3xl font-medium mx-auto mb-8 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
-            Let's Master the Differences Together
-          </h2> */}
-          {selectedConcept !== "ai" ? (
-            <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
-            <Select onValueChange={(value) => setLanguage1(value)}>
-              <SelectTrigger className="w-full md:w-[180px] shadow-sm">
-                <SelectValue placeholder="Select Language 1" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                {Object.keys(snippets.loops.examples).map((lang) => (
-                  <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
-                ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            <Select onValueChange={(value) => setLanguage2(value)}>
-              <SelectTrigger className="w-full md:w-[180px] shadow-sm">
-                <SelectValue placeholder="Select Language 2" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                {Object.keys(snippets.loops.examples).map((lang) => (
-                  <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
-                ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
+            </h1>
+            
+            {selectedConcept !== "ai" ? (
+              <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
+                <Select onValueChange={(value) => setLanguage1(value)}>
+                  <SelectTrigger className="w-full md:w-[180px] shadow-sm">
+                    <SelectValue placeholder="Select Language 1" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      {Object.keys(snippets.loops.examples).map((lang) => (
+                        <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <Select onValueChange={(value) => setLanguage2(value)}>
+                  <SelectTrigger className="w-full md:w-[180px] shadow-sm">
+                    <SelectValue placeholder="Select Language 2" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      {Object.keys(snippets.loops.examples).map((lang) => (
+                        <SelectItem key={lang} value={lang}>{lang.charAt(0).toUpperCase() + lang.slice(1)}</SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              </div>
+            ) : null}
           </div>
-          ) : null}
+          {selectedConcept === "ai" ? (
+            <AIComponent />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
+              <div className="code-box p-6">
+                <div className="h-[300px] overflow-auto">
+                  {renderSnippet(selectedConcept, language1)}
+                </div>
+              </div>
+              <div className="code-box">
+                <div className="h-[300px] overflow-auto">
+                  {renderSnippet(selectedConcept, language2)}
+                </div>
+              </div>
+            </div>
+          )}
+          {renderDescription(description)}
         </div>
-        {selectedConcept === "ai" ? (
-          <AIComponent />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
-            <div className="code-box p-6">
-              <div className="h-[300px] overflow-auto">
-                {renderSnippet(selectedConcept, language1)}
-              </div>
-            </div>
-            <div className="code-box">
-              <div className="h-[300px] overflow-auto">
-                {renderSnippet(selectedConcept, language2)}
-              </div>
-            </div>
-          </div>
-        )}
-        {renderDescription(description)}
-      </div>
       </div>
     </div>
   );
