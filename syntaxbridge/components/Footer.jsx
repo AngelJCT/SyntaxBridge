@@ -12,7 +12,7 @@ const Footer = () => {
             iconStyles="text-primary text-[20px] hover:text-white dark:hover:text-background transition-all"
           />
           {/* copyright */}
-          <div className="text-center text-muted-foreground mt-8">
+          <div className="text-center text-muted-foreground mt-8 xs:text-sm">
             <p>
               © 2024 - {new Date().getFullYear()} -{" "}
               <span className="">Angel J. Carrion</span>
