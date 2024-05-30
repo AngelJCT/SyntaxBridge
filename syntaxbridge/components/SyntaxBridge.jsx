@@ -100,7 +100,7 @@ export default function SyntaxBridge() {
           <div className="syntaxbridge-gradient-ball-1 -z-10 absolute md:top-[25rem] xs:top-[55rem] sm:top-[55rem]"></div>
           <div className="syntaxbridge-gradient-ball-2 -z-10 absolute md:top-[8rem] xs:top-[6rem]"></div>
           <div className="flex flex-col items-center justify-between text-center">
-            <h1 className="text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[5rem] xl:leading-[5rem] font-bold md:mb-10 xs:mb-8 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
+            <h1 className="text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[70px] xl:leading-[70px] font-bold md:mb-10 xs:mb-8 py-2 tracking-[2px] bg-gradient-to-l from-[#5c656d] to-[#26292b] dark:bg-gradient-to-r dark:from-[#f7f8f8] dark:to-[#b7bdc2] bg-clip-text text-transparent dark:bg-clip-text dark:text-transparent">
               Syntax<span className="font-normal">Bridge</span>
             </h1>
             
