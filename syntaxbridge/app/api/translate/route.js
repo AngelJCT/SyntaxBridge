@@ -3,8 +3,13 @@ import { getGroqChatCompletion } from '@/utils/groq';
 
 export const POST = async (req) => {
   try {
-    const { code } = await req.json();
-    const response = await getGroqChatCompletion(code);
+    const { code, language } = await req.json();
+    const prompts = `Translate the following code to ${language}:\n\n${code}`;
+    console.log("Prompt:", prompts);
+
+    const response = await getGroqChatCompletion(prompts);
+    console.log("Response:", response);
+
     return new Response(JSON.stringify(response), {
       status: 200,
       headers: {
@@ -12,6 +17,7 @@ export const POST = async (req) => {
       },
     });
   } catch (error) {
+    console.error("Error:", error);
     return new Response(JSON.stringify({ error: 'Failed to get translation' }), {
       status: 500,
       headers: {

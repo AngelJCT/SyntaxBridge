@@ -5,7 +5,18 @@ import { Button } from "@/components/ui/button";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import vs2015 from "@/utils/vs2015";
 import vs2015Dark from "@/utils/vs2015Dark";
-import { useTheme} from 'next-themes'
+import { useTheme} from 'next-themes';
+import {
+  SelectValue,
+  SelectTrigger,
+  SelectLabel,
+  SelectItem,
+  SelectGroup,
+  SelectContent,
+  Select,
+} from "@/components/ui/select";
+
+const languages = ["JavaScript", "Python", "Java", "C", "C++", "C#", "PHP", "Ruby", "Go", "Rust", "Swift", "Kotlin"];
 
 const AIComponent = () => {
   const [inputCode, setInputCode] = useState("");
@@ -13,6 +24,7 @@ const AIComponent = () => {
   const [outputCode, setOutputCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [language, setLanguage] = useState("text");
+  const [targetLanguage, setTargetLanguage] = useState("");
   const [isDarkMode, setIsDarkMode] = useState(false);
   const { theme } = useTheme();
 
@@ -32,7 +44,7 @@ const AIComponent = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ code: inputCode }),
+        body: JSON.stringify({ code: inputCode, language: targetLanguage}),
       });
       const data = await response.json();
       const { text, language, code } = extractCodeBlock(data.choices[0]?.message?.content || 'No response from AI');
@@ -76,8 +88,22 @@ const AIComponent = () => {
         <pre  className="w-full xs:h-[416px] md:h-[400px] font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] break-words whitespace-pre-wrap overflow-auto">
             <SyntaxHighlighter language={language} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[416px] md:h-[400px]">
                 {outputCode}
-             </SyntaxHighlighter>
-        </pre>  
+            </SyntaxHighlighter>
+        </pre> 
+        <div className="mb-5 mt-5">
+          <Select onValueChange={(value) => setTargetLanguage(value)}>
+            <SelectTrigger className="w-full md:w-[180px] shadow-sm">
+              <SelectValue placeholder="Select Language" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                {languages.map((lang) => (
+                  <SelectItem key={lang} value={lang}>{lang}</SelectItem>
+                ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div> 
       </div>
     </div>
   );

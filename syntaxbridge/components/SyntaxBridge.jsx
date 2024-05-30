@@ -30,6 +30,8 @@ const concepts = [
   { name: "AI", value: "ai" },
 ]
 
+
+
 export default function SyntaxBridge() {
   const { selectedConcept, setSelectedConcept, language1, setLanguage1, language2, setLanguage2 } = useStateContext();
   const [description, setDescription] = useState('');
