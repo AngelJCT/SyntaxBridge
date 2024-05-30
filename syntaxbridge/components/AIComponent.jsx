@@ -86,7 +86,7 @@ const AIComponent = () => {
       </div>
       <div className="code-box-ai p-6">
         <pre  className="w-full xs:h-[400px] lg:h-[600px] font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] break-words whitespace-pre-wrap overflow-auto">
-            <SyntaxHighlighter language={language} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[416px] md:h-[400px]">
+            <SyntaxHighlighter language={language} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[500px] lg:h-[700px]">
                 {outputCode}
             </SyntaxHighlighter>
         </pre> 
