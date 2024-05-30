@@ -31,7 +31,7 @@ const CTA = () => {
 
   return (
     <motion.section
-      className="py-12 flex xl:py-[200px] xl:h-[65vh] xs:h-[100hv]"
+      className="py-12 flex xl:py-[200px] xs:h-[100hv]"
       ref={ref}
       initial="hidden"
       animate={controls}
