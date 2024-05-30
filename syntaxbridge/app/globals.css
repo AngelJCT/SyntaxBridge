@@ -154,7 +154,7 @@
 }
 
 .code-box-ai {
-  @apply xs:h-[500px] bg-[#d5dde2] dark:bg-[#798189] bg-opacity-25 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
+  @apply xs:h-[500px] lg:h-[700px] bg-[#d5dde2] dark:bg-[#798189] bg-opacity-25 dark:bg-opacity-10 p-4 rounded-xl shadow-lg dark:shadow-none border border-[#26292b15] dark:border-[#b7bdc220];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }

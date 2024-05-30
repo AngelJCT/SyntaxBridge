@@ -75,7 +75,7 @@ const AIComponent = () => {
     <div className="grid xs:grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
       <div className="code-box-ai p-6">
         <textarea
-          className="w-full xs:h-[400px] p-2 font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] mb-2 bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] focus:outline-none focus:ring-2 focus:ring-[#26292b] dark:focus:ring-[#f7f8f8] focus:ring-offset-2"
+          className="w-full xs:h-[400px] lg:h-[600px] p-2 font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] mb-2 bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] focus:outline-none focus:ring-2 focus:ring-[#26292b] dark:focus:ring-[#f7f8f8] focus:ring-offset-2"
           value={inputCode}
           onChange={handleInputChange}
           placeholder="Write your code here..."
@@ -85,7 +85,7 @@ const AIComponent = () => {
         </Button>
       </div>
       <div className="code-box-ai p-6">
-        <pre  className="w-full xs:h-[400px] font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] break-words whitespace-pre-wrap overflow-auto">
+        <pre  className="w-full xs:h-[400px] lg:h-[600px] font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] break-words whitespace-pre-wrap overflow-auto">
             <SyntaxHighlighter language={language} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[416px] md:h-[400px]">
                 {outputCode}
             </SyntaxHighlighter>
