@@ -29,7 +29,7 @@ const PurposeSection = () => {
   
   return (
     <motion.section
-        className="py-12 flex xl:py-[130px] lg:py-[90px] xs:h-[100hv] items-center bg-opacity-15 dark:bg-opacity-20"
+        className="py-12 flex xl:py-[130px] lg:py-[90px] xs:h-[100hv] mb-12 xl:mb-0 items-center bg-opacity-15 dark:bg-opacity-20"
         ref={ref}
         initial="hidden"
         animate={controls}

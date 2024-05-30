@@ -49,7 +49,7 @@ const About = () => {
 
   return (
     <motion.section
-      className="py-12 xl:py-[150px] xs:h-[100hv]"
+      className="py-12 xl:py-[150px] mb-12 xl:mb-0 xs:h-[100hv]"
       ref={ref}
       initial="hidden"
       animate={controls}
