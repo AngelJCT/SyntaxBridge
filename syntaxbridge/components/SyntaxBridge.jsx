@@ -138,12 +138,12 @@ export default function SyntaxBridge() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-4">
               <div className="code-box p-6">
-                <div className="h-[300px] overflow-auto">
+                <div className="xs:h-[400px] lg:h-[600px] overflow-auto">
                   {renderSnippet(selectedConcept, language1)}
                 </div>
               </div>
               <div className="code-box">
-                <div className="h-[300px] overflow-auto">
+                <div className="xs:h-[400px] lg:h-[600px] overflow-auto">
                   {renderSnippet(selectedConcept, language2)}
                 </div>
               </div>

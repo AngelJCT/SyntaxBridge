@@ -41,7 +41,7 @@
           "description": "A while loop that prints numbers from 0 to 9."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "for (int i = 0; i < 10; i++) {\n    cout << i << endl;\n}",
           "description": "A simple for loop that prints numbers from 0 to 9."
@@ -51,7 +51,7 @@
           "description": "A while loop that prints numbers from 0 to 9."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "for (int i = 0; i < 10; i++) {\n    Console.WriteLine(i);\n}",
           "description": "A simple for loop that prints numbers from 0 to 9."
@@ -165,7 +165,7 @@
           "description": "If/else if/else statement to assign grades based on scores."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "if (a > b) {\n    cout << \"a is greater than b\" << endl;\n} else {\n    cout << \"b is greater than a\" << endl;\n}",
           "description": "Simple if/else statement to compare two variables."
@@ -175,7 +175,7 @@
           "description": "If/else if/else statement to assign grades based on scores."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "if (a > b) {\n    Console.WriteLine(\"a is greater than b\");\n} else {\n    Console.WriteLine(\"b is greater than a\");\n}",
           "description": "Simple if/else statement to compare two variables."
@@ -289,7 +289,7 @@
           "description": "Declare a string variable 'b' with the value 'Hello'."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "int a = 10;",
           "description": "Declare an integer variable 'a' with the value 10."
@@ -299,7 +299,7 @@
           "description": "Declare a string variable 'b' with the value 'Hello'."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "int a = 10;",
           "description": "Declare an integer variable 'a' with the value 10."
@@ -413,7 +413,7 @@
           "description": "A function that multiplies two numbers."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "int add(int a, int b) {\n    return a + b;\n}",
           "description": "A function that adds two numbers."
@@ -423,7 +423,7 @@
           "description": "A function that multiplies two numbers."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "public static int Add(int a, int b) {\n    return a + b;\n}",
           "description": "A function that adds two numbers."
@@ -537,7 +537,7 @@
           "description": "Define and export the 'add' function."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "#include \"add.h\"",
           "description": "Import the 'add' function from another header file."
@@ -547,7 +547,7 @@
           "description": "Define and export the 'add' function."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "using static add;",
           "description": "Import the 'add' function from another namespace."
@@ -661,7 +661,7 @@
           "description": "Define a struct 'Employee' that contains a 'Person' and a position."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "class Person {\n    private:\n    std::string name;\n\n    public:\n    Person(std::string name) {\n        this->name = name;\n    }\n}",
           "description": "Define a class 'Person' with a constructor."
@@ -671,7 +671,7 @@
           "description": "Define a class 'Employee' that inherits from 'Person'."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "public class Person {\n    private string name;\n\n    public Person(string name) {\n        this.name = name;\n    }\n}",
           "description": "Define a class 'Person' with a constructor."
@@ -769,13 +769,13 @@
           "description": "Using setjmp and longjmp for error handling."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "try {\n    int result = riskyFunction();\n} catch (const std::exception& e) {\n    std::cerr << e.what() << std::endl;\n} finally {\n    std::cout << 'Cleanup code' << std::endl;\n}",
           "description": "Using try-catch for error handling."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "try {\n    int result = RiskyFunction();\n} catch (Exception e) {\n    Console.WriteLine(e.Message);\n} finally {\n    Console.WriteLine('Cleanup code');\n}",
           "description": "Using try-catch-finally for error handling."
@@ -853,13 +853,13 @@
           "description": "Using the standard I/O library to write to and read from a file."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream outfile('example.txt');\n    outfile << 'Hello, World!' << std::endl;\n    outfile.close();\n\n    std::ifstream infile('example.txt');\n    std::string data;\n    std::getline(infile, data);\n    std::cout << data << std::endl;\n    infile.close();\n    return 0;\n}",
           "description": "Using fstream to write to and read from a file."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        File.WriteAllText('example.txt', 'Hello, World!');\n        string data = File.ReadAllText('example.txt');\n        Console.WriteLine(data);\n    }\n}",
           "description": "Using System.IO.File to write to and read from a file."
@@ -945,7 +945,7 @@
           "description": "Using a ternary operator to determine if someone can vote based on age."
         }
       ],
-      "cpp": [
+      "c++": [
         {
           "code": "int result = condition ? value_if_true : value_if_false;",
           "description": "Using a ternary operator to assign a value based on a condition."
@@ -955,7 +955,7 @@
           "description": "Using a ternary operator to determine if someone can vote based on age."
         }
       ],
-      "csharp": [
+      "c#": [
         {
           "code": "string result = condition ? 'value if true' : 'value if false';",
           "description": "Using a ternary operator to assign a value based on a condition."
