@@ -30,11 +30,11 @@ const BlogComponent = () => {
                     />
                     <div className="space-y-3 bg-[#eceff2] p-4 dark:bg-[#798189] dark:bg-opacity-30">
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-[#f7f8f8]">{article.title}</h3>
-                        <p className="sm:text-base xs:text-sm text-gray-600 dark:text-gray-400">
+                        <p className="sm:text-base xs:text-sm text-gray-600 dark:text-gray-300/80">
                             {article.description}
                         </p>
                         <div className="flex items-center justify-between">
-                            <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{article.date}</span>
+                            <span className="text-sm font-medium text-gray-600 dark:text-gray-300/80">{article.date}</span>
                             <Link
                                 className="text-sm font-medium text-gray-900 transition-colors hover:text-gray-700 dark:text-[#f7f8f8] dark:hover:text-gray-300"
                                 href={`/blog/${article.id}`}

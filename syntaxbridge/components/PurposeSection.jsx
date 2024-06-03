@@ -46,7 +46,7 @@ const PurposeSection = () => {
                 </h2>
             </div>
             <div className='mission-card relative max-w-[766px] mx-auto text-left mb-8 md:mb-12'>
-                <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto text-gray-600 dark:text-gray-400">
+                <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto text-gray-600 dark:text-gray-300/80">
                     Our mission at SyntaxBridge is to empower developers by simplifying the transition between different programming languages. We strive to provide a seamless and efficient platform for learning, comparing, and adapting to new syntaxes, enabling developers to focus on their tasks and excel in their careers without the barriers of language differences.
                 </p>
             </div>
@@ -56,7 +56,7 @@ const PurposeSection = () => {
                 </h2>
             </div>
             <div className='vision-card relative max-w-[766px] mx-auto text-left xs:mb-5'>
-                <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto text-gray-600 dark:text-gray-400">
+                <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto text-gray-600 dark:text-gray-300/80">
                 Our vision is to create a world where programming language barriers are non-existent, allowing developers to effortlessly switch between languages and tools. We aim to be the leading platform for syntax comparison and adaptation, fostering a community of versatile and skilled developers who can meet diverse job requirements with confidence and efficiency.
                 </p>
             </div>

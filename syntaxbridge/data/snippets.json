@@ -9,6 +9,10 @@
         {
           "code": "let i = 0;\nwhile (i < 10) {\n    console.log(i);\n    i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "let numbers = [1, 2, 3, 4, 5];\nlet sum = numbers.reduce((acc, num) => acc + num, 0);\nconsole.log(sum);",
+          "description": "Using a higher-order function to sum an array of numbers."
         }
       ],
       "python": [
@@ -19,6 +23,10 @@
         {
           "code": "i = 0\nwhile i < 10:\n    print(i)\n    i += 1",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "numbers = [1, 2, 3, 4, 5]\nsum = sum(numbers)\nprint(sum)",
+          "description": "Using the built-in sum function to sum an array of numbers."
         }
       ],
       "java": [
@@ -29,6 +37,10 @@
         {
           "code": "int i = 0;\nwhile (i < 10) {\n    System.out.println(i);\n    i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int[] numbers = {1, 2, 3, 4, 5};\nint sum = 0;\nfor (int num : numbers) {\n    sum += num;\n}\nSystem.out.println(sum);",
+          "description": "Using an enhanced for loop to sum an array of numbers."
         }
       ],
       "c": [
@@ -39,6 +51,10 @@
         {
           "code": "int i = 0;\nwhile (i < 10) {\n    printf(\"%d\\n\", i);\n    i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int numbers[] = {1, 2, 3, 4, 5};\nint sum = 0;\nfor (int i = 0; i < 5; i++) {\n    sum += numbers[i];\n}\nprintf(\"%d\\n\", sum);",
+          "description": "Using a for loop to sum an array of numbers."
         }
       ],
       "c++": [
@@ -49,6 +65,10 @@
         {
           "code": "int i = 0;\nwhile (i < 10) {\n    cout << i << endl;\n    i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "#include <vector>\n#include <numeric>\n\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\nint sum = std::accumulate(numbers.begin(), numbers.end(), 0);\ncout << sum << endl;",
+          "description": "Using the accumulate function from the numeric library to sum a vector of numbers."
         }
       ],
       "c#": [
@@ -59,6 +79,10 @@
         {
           "code": "int i = 0;\nwhile (i < 10) {\n    Console.WriteLine(i);\n    i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "int[] numbers = {1, 2, 3, 4, 5};\nint sum = 0;\nforeach (int num in numbers) {\n    sum += num;\n}\nConsole.WriteLine(sum);",
+          "description": "Using a foreach loop to sum an array of numbers."
         }
       ],
       "php": [
@@ -69,6 +93,10 @@
         {
           "code": "$i = 0;\nwhile ($i < 10) {\n    echo $i;\n    $i++;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "$numbers = [1, 2, 3, 4, 5];\n$sum = array_sum($numbers);\necho $sum;",
+          "description": "Using the array_sum function to sum an array of numbers."
         }
       ],
       "ruby": [
@@ -79,6 +107,10 @@
         {
           "code": "i = 0\nwhile i < 10\n    puts i\n    i += 1\nend",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "numbers = [1, 2, 3, 4, 5]\nsum = numbers.sum\nputs sum",
+          "description": "Using the sum method to sum an array of numbers."
         }
       ],
       "go": [
@@ -89,6 +121,10 @@
         {
           "code": "i := 0\nfor i < 10 {\n    fmt.Println(i)\n    i++\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "numbers := []int{1, 2, 3, 4, 5}\nsum := 0\nfor _, num := range numbers {\n    sum += num\n}\nfmt.Println(sum)",
+          "description": "Using a range loop to sum a slice of numbers."
         }
       ],
       "rust": [
@@ -99,6 +135,10 @@
         {
           "code": "let mut i = 0;\nwhile i < 10 {\n    println!(\"{}\", i);\n    i += 1;\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "let numbers = [1, 2, 3, 4, 5];\nlet sum: i32 = numbers.iter().sum();\nprintln!(\"{}\", sum);",
+          "description": "Using an iterator to sum a vector of numbers."
         }
       ],
       "swift": [
@@ -109,6 +149,10 @@
         {
           "code": "var i = 0\nwhile i < 10 {\n    print(i)\n    i += 1\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "let numbers = [1, 2, 3, 4, 5]\nlet sum = numbers.reduce(0, +)\nprint(sum)",
+          "description": "Using the reduce function to sum an array of numbers."
         }
       ],
       "kotlin": [
@@ -119,6 +163,10 @@
         {
           "code": "var i = 0\nwhile (i < 10) {\n    println(i)\n    i++\n}",
           "description": "A while loop that prints numbers from 0 to 9."
+        },
+        {
+          "code": "val numbers = listOf(1, 2, 3, 4, 5)\nval sum = numbers.sum()\nprintln(sum)",
+          "description": "Using the sum function to sum a list of numbers."
         }
       ]
     }
@@ -133,6 +181,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "let x = 10;\nlet y = 5;\nif (x > y && y > 0) {\n    console.log('x is greater than y and y is positive');\n} else if (x > 0 || y > 0) {\n    console.log('At least one of x or y is positive');\n} else {\n    console.log('Neither x nor y is positive');\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "python": [
@@ -143,6 +195,10 @@
         {
           "code": "if score >= 90:\n    grade = 'A'\nelif score >= 80:\n    grade = 'B'\nelse:\n    grade = 'C'",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "x = 10\ny = 5\nif x > y and y > 0:\n    print('x is greater than y and y is positive')\nelif x > 0 or y > 0:\n    print('At least one of x or y is positive')\nelse:\n    print('Neither x nor y is positive')",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "java": [
@@ -153,6 +209,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "int x = 10;\nint y = 5;\nif (x > y && y > 0) {\n    System.out.println('x is greater than y and y is positive');\n} else if (x > 0 || y > 0) {\n    System.out.println('At least one of x or y is positive');\n} else {\n    System.out.println('Neither x nor y is positive');\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "c": [
@@ -163,6 +223,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "int x = 10;\nint y = 5;\nif (x > y && y > 0) {\n    printf(\"x is greater than y and y is positive\\n\");\n} else if (x > 0 || y > 0) {\n    printf(\"At least one of x or y is positive\\n\");\n} else {\n    printf(\"Neither x nor y is positive\\n\");\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "c++": [
@@ -173,6 +237,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "int x = 10;\nint y = 5;\nif (x > y && y > 0) {\n    cout << 'x is greater than y and y is positive' << endl;\n} else if (x > 0 || y > 0) {\n    cout << 'At least one of x or y is positive' << endl;\n} else {\n    cout << 'Neither x nor y is positive' << endl;\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "c#": [
@@ -183,6 +251,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A';\n} else if (score >= 80) {\n    grade = 'B';\n} else {\n    grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "int x = 10;\nint y = 5;\nif (x > y && y > 0) {\n    Console.WriteLine(\"x is greater than y and y is positive\");\n} else if (x > 0 || y > 0) {\n    Console.WriteLine(\"At least one of x or y is positive\");\n} else {\n    Console.WriteLine(\"Neither x nor y is positive\");\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "php": [
@@ -193,6 +265,10 @@
         {
           "code": "if ($score >= 90) {\n    $grade = 'A';\n} else if ($score >= 80) {\n    $grade = 'B';\n} else {\n    $grade = 'C';\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "$x = 10;\n$y = 5;\nif ($x > $y && $y > 0) {\n    echo 'x is greater than y and y is positive';\n} else if ($x > 0 || $y > 0) {\n    echo 'At least one of x or y is positive';\n} else {\n    echo 'Neither x nor y is positive';\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "ruby": [
@@ -203,6 +279,10 @@
         {
           "code": "if score >= 90\n    grade = 'A'\nelsif score >= 80\n    grade = 'B'\nelse\n    grade = 'C'\nend",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "x = 10\ny = 5\nif x > y && y > 0\n    puts 'x is greater than y and y is positive'\nelsif x > 0 || y > 0\n    puts 'At least one of x or y is positive'\nelse\n    puts 'Neither x nor y is positive'\nend",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "go": [
@@ -213,6 +293,10 @@
         {
           "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "x := 10\ny := 5\nif x > y && y > 0 {\n    fmt.Println(\"x is greater than y and y is positive\")\n} else if x > 0 || y > 0 {\n    fmt.Println(\"At least one of x or y is positive\")\n} else {\n    fmt.Println(\"Neither x nor y is positive\")\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "rust": [
@@ -223,6 +307,10 @@
         {
           "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "let x = 10;\nlet y = 5;\nif x > y && y > 0 {\n    println!(\"x is greater than y and y is positive\");\n} else if x > 0 || y > 0 {\n    println!(\"At least one of x or y is positive\");\n} else {\n    println!(\"Neither x nor y is positive\");\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "swift": [
@@ -233,6 +321,10 @@
         {
           "code": "if score >= 90 {\n    grade = 'A'\n} else if score >= 80 {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "let x = 10\nlet y = 5\nif x > y && y > 0 {\n    print(\"x is greater than y and y is positive\")\n} else if x > 0 || y > 0 {\n    print(\"At least one of x or y is positive\")\n} else {\n    print(\"Neither x nor y is positive\")\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ],
       "kotlin": [
@@ -243,6 +335,10 @@
         {
           "code": "if (score >= 90) {\n    grade = 'A'\n} else if (score >= 80) {\n    grade = 'B'\n} else {\n    grade = 'C'\n}",
           "description": "If/else if/else statement to assign grades based on scores."
+        },
+        {
+          "code": "val x = 10\nval y = 5\nif (x > y && y > 0) {\n    println(\"x is greater than y and y is positive\")\n} else if (x > 0 || y > 0) {\n    println(\"At least one of x or y is positive\")\n} else {\n    println(\"Neither x nor y is positive\")\n}",
+          "description": "If/else if/else statement with multiple conditions."
         }
       ]
     }
@@ -257,6 +353,10 @@
         {
           "code": "const b = 'Hello';",
           "description": "Declare a constant 'b' with the value 'Hello'."
+        },
+        {
+          "code": "let x = 10, y = 20, z = x + y;\nconsole.log(z);",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "python": [
@@ -267,6 +367,10 @@
         {
           "code": "b = 'Hello'",
           "description": "Declare a variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "x, y = 10, 20\nz = x + y\nprint(z)",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "java": [
@@ -277,6 +381,10 @@
         {
           "code": "String b = 'Hello';",
           "description": "Declare a string variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "int x = 10, y = 20, z = x + y;\nSystem.out.println(z);",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "c": [
@@ -287,6 +395,10 @@
         {
           "code": "char* b = 'Hello';",
           "description": "Declare a string variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "int x = 10, y = 20, z = x + y;\nprintf(\"%d\\n\", z);",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "c++": [
@@ -297,6 +409,10 @@
         {
           "code": "std::string b = 'Hello';",
           "description": "Declare a string variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "int x = 10, y = 20, z = x + y;\ncout << z << endl;",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "c#": [
@@ -307,6 +423,10 @@
         {
           "code": "string b = 'Hello';",
           "description": "Declare a string variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "int x = 10, y = 20, z = x + y;\nConsole.WriteLine(z);",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "php": [
@@ -317,6 +437,10 @@
         {
           "code": "$b = 'Hello';",
           "description": "Declare a variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "$x = 10; $y = 20; $z = $x + $y;\necho $z;",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "ruby": [
@@ -327,6 +451,10 @@
         {
           "code": "b = 'Hello'",
           "description": "Declare a variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "x, y = 10, 20\nz = x + y\nputs z",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "go": [
@@ -337,6 +465,10 @@
         {
           "code": "b := 'Hello'",
           "description": "Declare a variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "x, y := 10, 20\nz := x + y\nfmt.Println(z)",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "rust": [
@@ -347,6 +479,10 @@
         {
           "code": "let b = 'Hello';",
           "description": "Declare a variable 'b' with the value 'Hello'."
+        },
+        {
+          "code": "let x = 10; let y = 20; let z = x + y;\nprintln!(\"{}\", z);",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "swift": [
@@ -357,6 +493,10 @@
         {
           "code": "let b = 'Hello'",
           "description": "Declare a constant 'b' with the value 'Hello'."
+        },
+        {
+          "code": "let x = 10, y = 20, z = x + y\nprint(z)",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ],
       "kotlin": [
@@ -367,6 +507,10 @@
         {
           "code": "val b = 'Hello'",
           "description": "Declare a constant 'b' with the value 'Hello'."
+        },
+        {
+          "code": "val x = 10; val y = 20; val z = x + y\nprintln(z)",
+          "description": "Declare multiple variables in a single statement and calculate their sum."
         }
       ]
     }
@@ -381,6 +525,10 @@
         {
           "code": "const multiply = (a, b) => a * b;",
           "description": "A function that multiplies two numbers using arrow syntax."
+        },
+        {
+          "code": "function factorial(n) {\n    if (n === 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\nconsole.log(factorial(5));",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "python": [
@@ -391,6 +539,10 @@
         {
           "code": "def multiply(a, b):\n    return a * b",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\nprint(factorial(5))",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "java": [
@@ -401,6 +553,10 @@
         {
           "code": "public static int multiply(int a, int b) {\n    return a * b;\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "public static int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\nSystem.out.println(factorial(5));",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "c": [
@@ -411,6 +567,10 @@
         {
           "code": "int multiply(int a, int b) {\n    return a * b;\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\nprintf(\"%d\\n\", factorial(5));",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "c++": [
@@ -421,6 +581,10 @@
         {
           "code": "int multiply(int a, int b) {\n    return a * b;\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "int factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\ncout << factorial(5) << endl;",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "c#": [
@@ -431,6 +595,10 @@
         {
           "code": "public static int Multiply(int a, int b) {\n    return a * b;\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "public static int Factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * Factorial(n - 1);\n}\nConsole.WriteLine(Factorial(5));",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "php": [
@@ -441,6 +609,10 @@
         {
           "code": "function multiply($a, $b) {\n    return $a * $b;\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "function factorial($n) {\n    if ($n == 0) {\n        return 1;\n    }\n    return $n * factorial($n - 1);\n}\necho factorial(5);",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "ruby": [
@@ -451,6 +623,10 @@
         {
           "code": "def multiply(a, b)\n    a * b\nend",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "def factorial(n)\n    if n == 0\n        1\n    else\n        n * factorial(n - 1)\n    end\nend\nputs factorial(5)",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "go": [
@@ -461,6 +637,10 @@
         {
           "code": "func multiply(a, b int) int {\n    return a * b\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "func factorial(n int) int {\n    if n == 0 {\n        return 1\n    }\n    return n * factorial(n - 1)\n}\nfmt.Println(factorial(5))",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "rust": [
@@ -471,6 +651,10 @@
         {
           "code": "fn multiply(a: i32, b: i32) -> i32 {\n    a * b\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "fn factorial(n: i32) -> i32 {\n    if n == 0 {\n        1\n    } else {\n        n * factorial(n - 1)\n    }\n}\nprintln!(\"{}\", factorial(5));",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "swift": [
@@ -481,6 +665,10 @@
         {
           "code": "func multiply(a: Int, b: Int) -> Int {\n    return a * b\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "func factorial(n: Int) -> Int {\n    if n == 0 {\n        return 1\n    }\n    return n * factorial(n - 1)\n}\nprint(factorial(5))",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ],
       "kotlin": [
@@ -491,6 +679,10 @@
         {
           "code": "fun multiply(a: Int, b: Int): Int {\n    return a * b\n}",
           "description": "A function that multiplies two numbers."
+        },
+        {
+          "code": "fun factorial(n: Int): Int {\n    if (n == 0) {\n        return 1\n    }\n    return n * factorial(n - 1)\n}\nprintln(factorial(5))",
+          "description": "A recursive function that calculates the factorial of a number."
         }
       ]
     }
@@ -505,6 +697,10 @@
         {
           "code": "export function add(a, b) {\n    return a + b;\n}",
           "description": "Export the 'add' function for use in other modules."
+        },
+        {
+          "code": "import { add, multiply } from './math.js';\nconsole.log(add(2, 3));\nconsole.log(multiply(2, 3));",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "python": [
@@ -515,6 +711,10 @@
         {
           "code": "def add(a, b):\n    return a + b",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "from math import add, multiply\nprint(add(2, 3))\nprint(multiply(2, 3))",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "java": [
@@ -525,6 +725,10 @@
         {
           "code": "public static int add(int a, int b) {\n    return a + b;\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "import static math.add;\nimport static math.multiply;\nSystem.out.println(add(2, 3));\nSystem.out.println(multiply(2, 3));",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "c": [
@@ -535,6 +739,10 @@
         {
           "code": "int add(int a, int b) {\n    return a + b;\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "#include \"math.h\"\n#include \"add.h\"\nint main() {\n    printf(\"%d\\n\", add(2, 3));\n    printf(\"%d\\n\", multiply(2, 3));\n    return 0;\n}",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "c++": [
@@ -545,6 +753,10 @@
         {
           "code": "int add(int a, int b) {\n    return a + b;\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "#include \"math.h\"\n#include \"add.h\"\nint main() {\n    cout << add(2, 3) << endl;\n    cout << multiply(2, 3) << endl;\n    return 0;\n}",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "c#": [
@@ -555,6 +767,10 @@
         {
           "code": "public static int Add(int a, int b) {\n    return a + b;\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "using static math.add;\nusing static math.multiply;\nclass Program {\n    static void Main() {\n        Console.WriteLine(Add(2, 3));\n        Console.WriteLine(Multiply(2, 3));\n    }\n}",
+          "description": "Import multiple functions from a single module and use them."
         }
       ],
       "php": [
@@ -565,6 +781,10 @@
         {
           "code": "function add($a, $b) {\n    return $a + $b;\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "require_once 'math.php';\n\necho add(2, 3);\necho multiply(2, 3);",
+          "description": "Import multiple functions from a single file and use them."
         }
       ],
       "ruby": [
@@ -575,6 +795,10 @@
         {
           "code": "def add(a, b)\n    a + b\nend",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "require_relative 'math.rb';\n\nputs add(2, 3)\nputs multiply(2, 3)",
+          "description": "Import multiple functions from a single file and use them."
         }
       ],
       "go": [
@@ -585,6 +809,10 @@
         {
           "code": "func add(a, b int) int {\n    return a + b\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "import (\n    \"math\"\n    \"add\"\n)\n\nfunc main() {\n    fmt.Println(add(2, 3))\n    fmt.Println(multiply(2, 3))\n}",
+          "description": "Import multiple functions from a single package and use them."
         }
       ],
       "rust": [
@@ -595,6 +823,10 @@
         {
           "code": "pub fn add(a: i32, b: i32) -> i32 {\n    a + b\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "mod math;\nuse add::add;\nuse math::{add, multiply};\n\nfn main() {\n    println!(\"{}\", add(2, 3));\n    println!(\"{}\", multiply(2, 3));\n}",
+          "description": "Import multiple functions from different modules and use them."
         }
       ],
       "swift": [
@@ -605,6 +837,10 @@
         {
           "code": "func add(a: Int, b: Int) -> Int {\n    return a + b\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "import add\nimport math\n\nprint(add(2, 3))\nprint(multiply(2, 3))",
+          "description": "Import multiple functions from different modules and use them."
         }
       ],
       "kotlin": [
@@ -615,6 +851,10 @@
         {
           "code": "fun add(a: Int, b: Int): Int {\n    return a + b\n}",
           "description": "Define and export the 'add' function."
+        },
+        {
+          "code": "import add\nimport math\n\nprintln(add(2, 3))\nprintln(multiply(2, 3))",
+          "description": "Import multiple functions from different modules and use them."
         }
       ]
     }
@@ -629,6 +869,10 @@
         {
           "code": "class Employee extends Person {\n    constructor(name, position) {\n        super(name);\n        this.position = position;\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager extends Employee {\n    constructor(name, position, department) {\n        super(name, position);\n        this.department = department;\n    }\n}\nconst manager = new Manager('Alice', 'Manager', 'HR');\nconsole.log(manager);",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "python": [
@@ -639,6 +883,10 @@
         {
           "code": "class Employee(Person):\n    def __init__(self, name, position):\n        super().__init__(name)\n        self.position = position\n",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager(Employee):\n    def __init__(self, name, position, department):\n        super().__init__(name, position)\n        self.department = department\n\nmanager = Manager('Alice', 'Manager', 'HR')\nprint(manager.__dict__)",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "java": [
@@ -649,6 +897,10 @@
         {
           "code": "public class Employee extends Person {\n    private String position;\n\n    public Employee(String name, String position) {\n        super(name);\n        this.position = position;\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "public class Manager extends Employee {\n    private String department;\n\n    public Manager(String name, String position, String department) {\n        super(name, position);\n        this.department = department;\n    }\n}\nManager manager = new Manager('Alice', 'Manager', 'HR');\nSystem.out.println(manager);",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "c": [
@@ -659,6 +911,10 @@
         {
           "code": "typedef struct Employee {\n    Person person;\n    char *position;\n} Employee;",
           "description": "Define a struct 'Employee' that contains a 'Person' and a position."
+        },
+        {
+          "code": "typedef struct Manager {\n    Employee employee;\n    char *department;\n} Manager;\nManager manager = { { \"Alice\" }, \"Manager\", \"HR\" };",
+          "description": "Define a struct 'Manager' that contains an 'Employee' and a department."
         }
       ],
       "c++": [
@@ -669,6 +925,10 @@
         {
           "code": "class Employee : public Person {\n    private:\n    std::string position;\n\n    public:\n    Employee(std::string name, std::string position) : Person(name) {\n        this->position = position;\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager : public Employee {\n    private:\n    std::string department;\n\n    public:\n    Manager(std::string name, std::string position, std::string department) : Employee(name, position) {\n        this->department = department;\n    }\n};\nManager manager('Alice', 'Manager', 'HR');",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "c#": [
@@ -679,6 +939,10 @@
         {
           "code": "public class Employee : Person {\n    private string position;\n\n    public Employee(string name, string position) : base(name) {\n        this.position = position;\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "public class Manager : Employee {\n    private string department;\n\n    public Manager(string name, string position, string department) : base(name, position) {\n        this.department = department;\n    }\n}\nManager manager = new Manager('Alice', 'Manager', 'HR');\nConsole.WriteLine(manager);",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "php": [
@@ -689,6 +953,10 @@
         {
           "code": "class Employee extends Person {\n    private $position;\n\n    public function __construct($name, $position) {\n        parent::__construct($name);\n        $this->position = $position;\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager extends Employee {\n    private $department;\n\n    public function __construct($name, $position, $department) {\n        parent::__construct($name, $position);\n        $this->department = $department;\n    }\n}\n$manager = new Manager('Alice', 'Manager', 'HR');\necho json_encode($manager);",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "ruby": [
@@ -699,6 +967,10 @@
         {
           "code": "class Employee < Person\n    def initialize(name, position)\n        super(name)\n        @position = position\n    end\nend",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager < Employee\n    def initialize(name, position, department)\n        super(name, position)\n        @department = department\n    end\nend\nmanager = Manager.new('Alice', 'Manager', 'HR')\nputs manager.inspect",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "go": [
@@ -709,6 +981,10 @@
         {
           "code": "type Employee struct {\n    Person\n    position string\n}\n\nfunc NewEmployee(name, position string) *Employee {\n    return &Employee{Person: Person{name: name}, position: position}\n}",
           "description": "Define a struct 'Employee' that embeds 'Person' and a position, with a constructor function."
+        },
+        {
+          "code": "type Manager struct {\n    Employee\n    department string\n}\n\nfunc NewManager(name, position, department string) *Manager {\n    return &Manager{Employee: Employee{Person: Person{name: name}, position: position}, department: department}\n}\nmanager := NewManager('Alice', 'Manager', 'HR')\nfmt.Printf(\"%+v\", manager)",
+          "description": "Define a struct 'Manager' that embeds 'Employee' and a department, with a constructor function."
         }
       ],
       "rust": [
@@ -719,6 +995,10 @@
         {
           "code": "struct Employee {\n    person: Person,\n    position: String\n}\n\nimpl Employee {\n    fn new(name: String, position: String) -> Employee {\n        Employee { person: Person::new(name), position }\n    }\n}",
           "description": "Define a struct 'Employee' that contains 'Person' and a position, with an implementation block for methods."
+        },
+        {
+          "code": "struct Manager {\n    employee: Employee,\n    department: String\n}\n\nimpl Manager {\n    fn new(name: String, position: String, department: String) -> Manager {\n        Manager { employee: Employee::new(name, position), department }\n    }\n}\nlet manager = Manager::new(\"Alice\", \"Manager\", \"HR\");\nprintln!(\"{:?}\", manager);",
+          "description": "Define a struct 'Manager' that contains 'Employee' and a department, with an implementation block for methods."
         }
       ],
       "swift": [
@@ -729,6 +1009,10 @@
         {
           "code": "class Employee: Person {\n    private var position: String\n\n    init(name: String, position: String) {\n        self.position = position\n        super.init(name: name)\n    }\n}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager: Employee {\n    private var department: String\n\n    init(name: String, position: String, department: String) {\n        self.department = department\n        super.init(name: name, position: position)\n    }\n}\nlet manager = Manager(name: 'Alice', position: 'Manager', department: 'HR')\nprint(manager)",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ],
       "kotlin": [
@@ -739,6 +1023,10 @@
         {
           "code": "class Employee(name: String, private val position: String) : Person(name) {}",
           "description": "Define a class 'Employee' that inherits from 'Person'."
+        },
+        {
+          "code": "class Manager(name: String, position: String, private val department: String) : Employee(name, position)\nval manager = Manager('Alice', 'Manager', 'HR')\nprintln(manager)",
+          "description": "Define a class 'Manager' that inherits from 'Employee' and adds a new property."
         }
       ]
     }
@@ -749,72 +1037,120 @@
         {
           "code": "try {\n    // code that may throw an error\n    let result = riskyFunction();\n} catch (error) {\n    console.error(error);\n} finally {\n    console.log('Cleanup code');\n}",
           "description": "Using try-catch-finally for error handling."
+        },
+        {
+          "code": "async function example() {\n  try {\n    let result = await riskyFunction();\n  } catch (error) {\n    console.error(error);\n  } finally {\n    console.log('Cleanup code');\n  }\n}\nexample();",
+          "description": "Using async/await with try-catch-finally for error handling."
         }
       ],
       "python": [
         {
           "code": "try:\n    result = risky_function()\nexcept Exception as e:\n    print(e)\nfinally:\n    print('Cleanup code')",
           "description": "Using try-except-finally for error handling."
-        }
+        },
+      {
+          "code": "import logging\n\nlogging.basicConfig(level=logging.ERROR)\n\nclass CustomError(Exception):\n    pass\n\ndef risky_function():\n    raise CustomError('Something went wrong')\n\ntry:\n    risky_function()\nexcept CustomError as e:\n    logging.error(f'CustomError occurred: {e}')\nexcept Exception as e:\n    logging.error(f'An unexpected error occurred: {e}')\nfinally:\n    print('Cleanup code')",
+          "description": "Using custom exceptions and logging for error handling."
+      }
       ],
       "java": [
         {
           "code": "try {\n    int result = riskyFunction();\n} catch (Exception e) {\n    e.printStackTrace();\n} finally {\n    System.out.println('Cleanup code');\n}",
           "description": "Using try-catch-finally for error handling."
+        },
+        {
+          "code": "public class CustomException extends Exception {\n    public CustomException(String message) {\n        super(message);\n    }\n}\n\npublic int riskyFunction() throws CustomException {\n    throw new CustomException('Something went wrong');\n}\n\ntry {\n    riskyFunction();\n} catch (CustomException e) {\n    e.printStackTrace();\n} finally {\n    System.out.println('Cleanup code');\n}",
+          "description": "Using custom exceptions for error handling."
         }
       ],
       "c": [
         {
           "code": "#include <setjmp.h>\n\njmp_buf buf;\n\nvoid riskyFunction() {\n    if (setjmp(buf)) {\n        printf('Error occurred');\n    } else {\n        longjmp(buf, 1);\n    }\n}",
           "description": "Using setjmp and longjmp for error handling."
+        },
+        {
+          "code": "#include <stdio.h>\n\nint riskyFunction() {\n    return 1;\n}\n\nint main() {\n    if (setjmp(buf)) {\n        printf('Error occurred');\n    } else {\n        riskyFunction();\n        longjmp(buf, 1);\n    }\n}",
+          "description": "Using setjmp and longjmp for error handling in a main function."
         }
       ],
       "c++": [
         {
           "code": "try {\n    int result = riskyFunction();\n} catch (const std::exception& e) {\n    std::cerr << e.what() << std::endl;\n} finally {\n    std::cout << 'Cleanup code' << std::endl;\n}",
           "description": "Using try-catch for error handling."
+        },
+        {
+          "code": "class CustomException : public std::exception {\npublic:\n    CustomException(const char* message) : message(message) {}\n    const char* what() const noexcept override { return message; }\nprivate:\n    const char* message;\n};\n\nint riskyFunction() {\n    throw CustomException('Something went wrong');\n}\n\ntry {\n    riskyFunction();\n} catch (const CustomException& e) {\n    std::cerr << e.what() << std::endl;\n} finally {\n    std::cout << 'Cleanup code' << std::endl;\n}",
+          "description": "Using custom exceptions for error handling."
         }
       ],
       "c#": [
         {
           "code": "try {\n    int result = RiskyFunction();\n} catch (Exception e) {\n    Console.WriteLine(e.Message);\n} finally {\n    Console.WriteLine('Cleanup code');\n}",
           "description": "Using try-catch-finally for error handling."
+        },
+        {
+          "code": "public class CustomException : Exception {\n    public CustomException(string message) : base(message) {}\n}\n\npublic int RiskyFunction() {\n    throw new CustomException('Something went wrong');\n}\n\ntry {\n    RiskyFunction();\n} catch (CustomException e) {\n    Console.WriteLine(e.Message);\n} finally {\n    Console.WriteLine('Cleanup code');\n}",
+          "description": "Using custom exceptions for error handling."
         }
       ],
       "php": [
         {
           "code": "try {\n    $result = riskyFunction();\n} catch (Exception $e) {\n    echo $e->getMessage();\n} finally {\n    echo 'Cleanup code';\n}",
           "description": "Using try-catch-finally for error handling."
+        },
+        {
+          "code": "class CustomException extends Exception {}\n\nfunction riskyFunction() {\n    throw new CustomException('Something went wrong');\n}\n\ntry {\n    riskyFunction();\n} catch (CustomException $e) {\n    echo $e->getMessage();\n} finally {\n    echo 'Cleanup code';\n}",
+          "description": "Using custom exceptions for error handling."
         }
       ],
       "ruby": [
         {
           "code": "begin\n    result = risky_function\nrescue => e\n    puts e.message\nensure\n    puts 'Cleanup code'\nend",
           "description": "Using begin-rescue-ensure for error handling."
+        },
+        {
+          "code": "class CustomError < StandardError; end\n\ndef risky_function\n    raise CustomError.new('Something went wrong')\nend\n\nbegin\n    risky_function\nrescue CustomError => e\n    puts e.message\nensure\n    puts 'Cleanup code'\nend",
+          "description": "Using custom exceptions for error handling."
         }
       ],
       "go": [
         {
           "code": "func riskyFunction() (result int, err error) {\n    defer func() {\n        if r := recover(); r != nil {\n            err = fmt.Errorf('riskyFunction failed: %v', r)\n        }\n    }()\n    panic('something went wrong')\n}",
           "description": "Using defer and recover for error handling."
+        },
+        {
+          "code": "func riskyFunction() (result int, err error) {\n    return 0, errors.New('something went wrong')\n}\n\nfunc main() {\n    result, err := riskyFunction()\n    if err != nil {\n        log.Fatal(err)\n    }\n}",
+          "description": "Returning an error from a function and handling it in the main function."
         }
       ],
       "rust": [
         {
           "code": "fn risky_function() -> Result<i32, String> {\n    if some_condition {\n        Ok(42)\n    } else {\n        Err(String::from('Error occurred'))\n    }\n}",
           "description": "Using Result for error handling."
+        },
+        {
+          "code": "fn risky_function() -> Result<i32, String> {\n    if some_condition {\n        Ok(42)\n    } else {\n        Err(String::from('Error occurred'))\n    }\n}\n\nmatch risky_function() {\n    Ok(result) => println!(\"Result: {}\", result),\n    Err(error) => eprintln!(\"Error: {}\", error),\n}",
+          "description": "Matching on the Result type for error handling."
         }
       ],
       "swift": [
         {
           "code": "do {\n    let result = try riskyFunction()\n} catch {\n    print(error)\n} finally {\n    print('Cleanup code')\n}",
           "description": "Using do-try-catch for error handling."
+        },
+        {
+          "code": "enum CustomError: Error {\n    case somethingWentWrong\n}\n\nfunc riskyFunction() throws -> Int {\n    throw CustomError.somethingWentWrong\n}\n\ndo {\n    let result = try riskyFunction()\n} catch CustomError.somethingWentWrong {\n    print('Something went wrong')\n} catch {\n    print(error)\n} finally {\n    print('Cleanup code')\n}",
+          "description": "Using custom errors and do-try-catch for error handling."
         }
       ],
       "kotlin": [
         {
           "code": "try {\n    val result = riskyFunction()\n} catch (e: Exception) {\n    println(e.message)\n} finally {\n    println('Cleanup code')\n}",
           "description": "Using try-catch-finally for error handling."
+        },
+        {
+          "code": "class CustomException(message: String) : Exception(message)\n\nfun riskyFunction() {\n    throw CustomException('Something went wrong')\n}\n\ntry {\n    riskyFunction()\n} catch (e: CustomException) {\n    println(e.message)\n} finally {\n    println('Cleanup code')\n}",
+          "description": "Using custom exceptions for error handling."
         }
       ]
     }
@@ -829,6 +1165,10 @@
         {
           "code": "const fs = require('fs').promises;\n\nasync function example() {\n  await fs.writeFile('example.txt', 'Hello, World!');\n  const data = await fs.readFile('example.txt', 'utf8');\n  console.log(data);\n}\nexample();",
           "description": "Using Node.js fs promises API for asynchronous file operations."
+        },
+        {
+          "code": "const fs = require('fs');\nconst readline = require('readline');\n\nconst rl = readline.createInterface({\n  input: fs.createReadStream('example.txt'),\n  output: process.stdout,\n  terminal: false\n});\n\nrl.on('line', (line) => {\n  console.log(line);\n});",
+          "description": "Using Node.js fs and readline modules to read a file line by line."
         }
       ],
       "python": [
@@ -839,66 +1179,151 @@
         {
           "code": "import os\n\nwith open('example.txt', 'w') as file:\n    file.write('Hello, World!')\n\nwith open('example.txt', 'r') as file:\n    data = file.read()\n    print(data)\n\nos.remove('example.txt')",
           "description": "Using the os module to handle file operations and delete a file."
+        },
+        {
+          "code": "with open('example.txt', 'w') as file:\n    file.write('Hello, World!\\nThis is a test.')\n\nwith open('example.txt', 'r') as file:\n    for line in file:\n        print(line.strip())",
+          "description": "Writing multiple lines to a file and reading them line by line."
         }
       ],
       "java": [
         {
           "code": "import java.nio.file.*;\nimport java.io.IOException;\n\npublic class FileIOExample {\n    public static void main(String[] args) {\n        try {\n            Files.writeString(Path.of('example.txt'), 'Hello, World!');\n            String data = Files.readString(Path.of('example.txt'));\n            System.out.println(data);\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
           "description": "Using java.nio.file.Files to write to and read from a file."
+        },
+        {
+          "code": "import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class FileIOExample {\n    public static void main(String[] args) {\n        try (FileWriter writer = new FileWriter('example.txt')) {\n            writer.write('Hello, World!\\nThis is a test.');\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n\n        try (BufferedReader reader = new BufferedReader(new FileReader('example.txt'))) {\n            String line;\n            while ((line = reader.readLine()) != null) {\n                System.out.println(line);\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "description": "Using FileWriter and BufferedReader to write to and read from a file line by line."
+        },
+        {
+          "code": "import java.io.*;\n\npublic class FileIOExample {\n    public static void main(String[] args) {\n        try (FileWriter writer = new FileWriter('example.txt')) {\n            writer.write('Hello, World!\\nThis is a test.');\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n\n        try (BufferedReader reader = new BufferedReader(new FileReader('example.txt'))) {\n            String line;\n            while ((line = reader.readLine()) != null) {\n                System.out.println(line);\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+          "description": "Using FileWriter and BufferedReader to write to and read from a file line by line."
         }
       ],
       "c": [
         {
           "code": "#include <stdio.h>\n\nint main() {\n    FILE *file = fopen('example.txt', 'w');\n    if (file) {\n        fputs('Hello, World!', file);\n        fclose(file);\n    }\n    file = fopen('example.txt', 'r');\n    if (file) {\n        char buffer[50];\n        fgets(buffer, 50, file);\n        printf('%s\\n', buffer);\n        fclose(file);\n    }\n    return 0;\n}",
           "description": "Using the standard I/O library to write to and read from a file."
+        },
+        {
+          "code": "#include <stdio.h>\n\nint main() {\n    FILE *file = fopen('example.txt', 'w');\n    if (file) {\n        fputs('Hello, World!\\nThis is a test.', file);\n        fclose(file);\n    }\n    file = fopen('example.txt', 'r');\n    if (file) {\n        char buffer[50];\n        while (fgets(buffer, 50, file) != NULL) {\n            printf('%s', buffer);\n        }\n        fclose(file);\n    }\n    return 0;\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using the standard I/O library."
+        },
+        {
+          "code": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    FILE *file = fopen('example.txt', 'w');\n    if (file) {\n        fprintf(file, 'Hello, World!\\nThis is a test.');\n        fclose(file);\n    }\n    file = fopen('example.txt', 'r');\n    if (file) {\n        char *buffer = NULL;\n        size_t len = 0;\n        while (getline(&buffer, &len, file) != -1) {\n            printf('%s', buffer);\n        }\n        fclose(file);\n        free(buffer);\n    }\n    return 0;\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using fprintf and getline."
         }
       ],
       "c++": [
         {
           "code": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream outfile('example.txt');\n    outfile << 'Hello, World!' << std::endl;\n    outfile.close();\n\n    std::ifstream infile('example.txt');\n    std::string data;\n    std::getline(infile, data);\n    std::cout << data << std::endl;\n    infile.close();\n    return 0;\n}",
           "description": "Using fstream to write to and read from a file."
+        },
+        {
+          "code": "#include <iostream>\n#include <fstream>\n\nint main() {\n    std::ofstream outfile('example.txt');\n    outfile << 'Hello, World!' << std::endl;\n    outfile << 'This is a test.' << std::endl;\n    outfile.close();\n\n    std::ifstream infile('example.txt');\n    std::string line;\n    while (std::getline(infile, line)) {\n        std::cout << line << std::endl;\n    }\n    infile.close();\n    return 0;\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using fstream."
+        },
+        {
+          "code": "#include <iostream>\n#include <fstream>\n#include <string>\n\nint main() {\n    std::ofstream outfile('example.txt');\n    outfile << 'Hello, World!' << std::endl;\n    outfile << 'This is a test.' << std::endl;\n    outfile.close();\n\n    std::ifstream infile('example.txt');\n    std::string line;\n    while (std::getline(infile, line)) {\n        std::cout << line << std::endl;\n    }\n    infile.close();\n    return 0;\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using fstream."
         }
       ],
       "c#": [
         {
           "code": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        File.WriteAllText('example.txt', 'Hello, World!');\n        string data = File.ReadAllText('example.txt');\n        Console.WriteLine(data);\n    }\n}",
           "description": "Using System.IO.File to write to and read from a file."
+        },
+        {
+          "code": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        File.WriteAllText('example.txt', 'Hello, World!\\nThis is a test.');\n        string[] lines = File.ReadAllLines('example.txt');\n        foreach (string line in lines) {\n            Console.WriteLine(line);\n        }\n    }\n}",
+          "description": "Using System.IO.File to write multiple lines to a file and read them line by line."
+        },
+        {
+          "code": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        using (StreamWriter writer = new StreamWriter('example.txt')) {\n            writer.WriteLine('Hello, World!');\n            writer.WriteLine('This is a test.');\n        }\n\n        using (StreamReader reader = new StreamReader('example.txt')) {\n            string line;\n            while ((line = reader.ReadLine()) != null) {\n                Console.WriteLine(line);\n            }\n        }\n    }\n}",
+          "description": "Using StreamWriter and StreamReader to write to and read from a file line by line."
         }
+
       ],
       "php": [
         {
           "code": "file_put_contents('example.txt', 'Hello, World!');\n$data = file_get_contents('example.txt');\necho $data;",
           "description": "Using file_put_contents and file_get_contents to write to and read from a file."
+        },
+        {
+          "code": "file_put_contents('example.txt', \"Hello, World!\\nThis is a test.\");\n$lines = file('example.txt');\nforeach ($lines as $line) {\n    echo $line;\n}",
+          "description": "Using file_put_contents and file to write multiple lines to a file and read them line by line."
+        },
+        {
+          "code": "$file = fopen('example.txt', 'w');\nif ($file) {\n    fwrite($file, \"Hello, World!\\nThis is a test.\");\n    fclose($file);\n}\n$file = fopen('example.txt', 'r');\nif ($file) {\n    while (($line = fgets($file)) !== false) {\n        echo $line;\n    }\n    fclose($file);\n}",
+          "description": "Using fopen, fwrite, fgets, and fclose to write to and read from a file line by line."
         }
       ],
       "ruby": [
         {
           "code": "File.write('example.txt', 'Hello, World!')\ndata = File.read('example.txt')\nputs data",
           "description": "Using File.write and File.read to write to and read from a file."
+        },
+        {
+          "code": "File.write('example.txt', \"Hello, World!\\nThis is a test.\")\nFile.foreach('example.txt') do |line|\n    puts line\nend",
+          "description": "Writing multiple lines to a file and reading them line by line using File.write and File.foreach."
+        },
+        {
+          "code": "File.open('example.txt', 'w') do |file|\n    file.puts 'Hello, World!'\n    file.puts 'This is a test.'\nend\nFile.readlines('example.txt').each do |line|\n    puts line\nend",
+          "description": "Using File.open and File.readlines to write to and read from a file line by line."
         }
       ],
       "go": [
         {
           "code": "import (\n    'fmt'\n    'io/ioutil'\n)\n\nfunc main() {\n    ioutil.WriteFile('example.txt', []byte('Hello, World!'), 0644)\n    data, _ := ioutil.ReadFile('example.txt')\n    fmt.Println(string(data))\n}",
           "description": "Using ioutil package to write to and read from a file."
+        },
+        {
+          "code": "import (\n    'bufio'\n    'fmt'\n    'os'\n)\n\nfunc main() {\n    file, _ := os.Create('example.txt')\n    file.WriteString('Hello, World!\\nThis is a test.')\n    file.Close()\n\n    file, _ = os.Open('example.txt')\n    scanner := bufio.NewScanner(file)\n    for scanner.Scan() {\n        fmt.Println(scanner.Text())\n    }\n    file.Close()\n}",
+          "description": "Using os and bufio packages to write to and read from a file line by line."
+        },
+        {
+          "code": "import (\n    'bufio'\n    'fmt'\n    'os'\n)\n\nfunc main() {\n    file, _ := os.Create('example.txt')\n    writer := bufio.NewWriter(file)\n    writer.WriteString('Hello, World!\\nThis is a test.')\n    writer.Flush()\n    file.Close()\n\n    file, _ = os.Open('example.txt')\n    scanner := bufio.NewScanner(file)\n    for scanner.Scan() {\n        fmt.Println(scanner.Text())\n    }\n    file.Close()\n}",
+          "description": "Using bufio.NewWriter and bufio.NewScanner to write to and read from a file line by line."
         }
       ],
       "rust": [
         {
           "code": "use std::fs;\n\nfn main() {\n    fs::write('example.txt', 'Hello, World!').expect('Unable to write file');\n    let data = fs::read_to_string('example.txt').expect('Unable to read file');\n    println!(\"{}\", data);\n}",
           "description": "Using std::fs module to write to and read from a file."
+        },
+        {
+          "code": "use std::fs::File;\nuse std::io::{self, BufRead, Write};\n\nfn main() -> io::Result<()> {\n    let mut file = File::create('example.txt')?;\n    writeln!(file, 'Hello, World!')?;\n    writeln!(file, 'This is a test.')?;\n\n    let file = File::open('example.txt')?;\n    let reader = io::BufReader::new(file);\n    for line in reader.lines() {\n        println!(\"{}\", line?);\n    }\n    Ok(())\n}",
+          "description": "Using std::fs::File and std::io::BufReader to write to and read from a file line by line."
+        },
+        {
+          "code": "use std::fs::OpenOptions;\nuse std::io::{self, BufRead, BufReader, Write};\n\nfn main() -> io::Result<()> {\n    let mut file = OpenOptions::new().write(true).create(true).open('example.txt')?;\n    writeln!(file, 'Hello, World!')?;\n    writeln!(file, 'This is a test.')?;\n\n    let file = OpenOptions::new().read(true).open('example.txt')?;\n    let reader = BufReader::new(file);\n    for line in reader.lines() {\n        println!(\"{}\", line?);\n    }\n    Ok(())\n}",
+          "description": "Using std::fs::OpenOptions and std::io::BufReader to write to and read from a file line by line."
         }
       ],
       "swift": [
         {
           "code": "import Foundation\n\nlet text = 'Hello, World!'\ntry text.write(toFile: 'example.txt', atomically: true, encoding: .utf8)\nlet data = try String(contentsOfFile: 'example.txt', encoding: .utf8)\nprint(data)",
           "description": "Using Foundation framework to write to and read from a file."
+        },
+        {
+          "code": "import Foundation\n\nlet text = 'Hello, World!\\nThis is a test.'\ntry text.write(toFile: 'example.txt', atomically: true, encoding: .utf8)\nlet contents = try String(contentsOfFile: 'example.txt', encoding: .utf8)\ncontents.enumerateLines { line, _ in\n    print(line)\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using Foundation framework."
+        },
+        {
+          "code": "import Foundation\n\nlet fileURL = URL(fileURLWithPath: 'example.txt')\nlet text = 'Hello, World!\\nThis is a test.'\ntry text.write(to: fileURL, atomically: true, encoding: .utf8)\n\nif let fileHandle = FileHandle(forReadingAtPath: 'example.txt') {\n    let data = fileHandle.readDataToEndOfFile()\n    if let contents = String(data: data, encoding: .utf8) {\n        contents.enumerateLines { line, _ in\n            print(line)\n        }\n    }\n    fileHandle.closeFile()\n}",
+          "description": "Using URL and FileHandle to write to and read from a file."
         }
       ],
       "kotlin": [
         {
           "code": "import java.io.File\n\nfun main() {\n    File('example.txt').writeText('Hello, World!')\n    val data = File('example.txt').readText()\n    println(data)\n}",
           "description": "Using java.io.File to write to and read from a file."
+        },
+        {
+          "code": "import java.io.File\n\nfun main() {\n    File('example.txt').writeText('Hello, World!\\nThis is a test.')\n    File('example.txt').forEachLine { println(it) }\n}",
+          "description": "Writing multiple lines to a file and reading them line by line using java.io.File."
+        },
+        {
+          "code": "import java.io.File\n\nfun main() {\n    val file = File('example.txt')\n    file.bufferedWriter().use { out ->\n        out.write('Hello, World!\\n')\n        out.write('This is a test.')\n    }\n\n    file.bufferedReader().useLines { lines ->\n        lines.forEach { println(it) }\n    }\n}",
+          "description": "Using bufferedWriter and bufferedReader to write to and read from a file line by line."
         }
       ]
     }
@@ -913,6 +1338,10 @@
         {
           "code": "const age = 18;\nconst canVote = age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "const score = 85;\nconst grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nconsole.log(`Grade: ${grade}`);",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "python": [
@@ -923,6 +1352,10 @@
         {
           "code": "age = 18\ncan_vote = 'Yes' if age >= 18 else 'No'",
           "description": "Using a ternary expression to determine if someone can vote based on age."
+        },
+        {
+          "code": "score = 85\ngrade = 'A' if score >= 90 else 'B' if score >= 80 else 'C'\nprint(f'Grade: {grade}')",
+          "description": "Using nested ternary expressions to assign grades based on scores."
         }
       ],
       "java": [
@@ -933,6 +1366,10 @@
         {
           "code": "int age = 18;\nString canVote = age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "int score = 85;\nString grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nSystem.out.println('Grade: ' + grade);",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "c": [
@@ -943,6 +1380,10 @@
         {
           "code": "int age = 18;\nchar* canVote = age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "int score = 85;\nchar* grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nprintf('Grade: %s\\n', grade);",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "c++": [
@@ -953,6 +1394,10 @@
         {
           "code": "int age = 18;\nstd::string canVote = age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "int score = 85;\nstd::string grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nstd::cout << 'Grade: ' << grade << std::endl;",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "c#": [
@@ -963,6 +1408,10 @@
         {
           "code": "int age = 18;\nstring canVote = age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "int score = 85;\nstring grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C';\nConsole.WriteLine('Grade: ' + grade);",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "php": [
@@ -973,6 +1422,10 @@
         {
           "code": "$age = 18;\n$canVote = $age >= 18 ? 'Yes' : 'No';",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "$score = 85;\n$grade = $score >= 90 ? 'A' : ($score >= 80 ? 'B' : 'C');\necho 'Grade: ' . $grade;",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "ruby": [
@@ -983,6 +1436,10 @@
         {
           "code": "age = 18\ncan_vote = age >= 18 ? 'Yes' : 'No'",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "score = 85\ngrade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C'\nputs \"Grade: #{grade}\"",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "go": [
@@ -993,6 +1450,10 @@
         {
           "code": "age := 18\ncanVote := \"No\"\nif age >= 18 {\n    canVote = \"Yes\"\n}",
           "description": "Using an if statement to determine if someone can vote based on age."
+        },
+        {
+          "code": "score := 85\ngrade := \"C\"\nif score >= 90 {\n    grade = \"A\"\n} else if score >= 80 {\n    grade = \"B\"\n}\nfmt.Println(\"Grade:\", grade)",
+          "description": "Using nested if-else statements to assign grades based on scores."
         }
       ],
       "rust": [
@@ -1003,6 +1464,10 @@
         {
           "code": "let age = 18;\nlet can_vote = if age >= 18 { \"Yes\" } else { \"No\" };",
           "description": "Using an if expression to determine if someone can vote based on age."
+        },
+        {
+          "code": "let score = 85;\nlet grade = if score >= 90 { \"A\" } else if score >= 80 { \"B\" } else { \"C\" };\nprintln!(\"Grade: {}\", grade);",
+          "description": "Using nested if expressions to assign grades based on scores."
         }
       ],
       "swift": [
@@ -1013,6 +1478,10 @@
         {
           "code": "let age = 18\nlet canVote = age >= 18 ? 'Yes' : 'No'",
           "description": "Using a ternary operator to determine if someone can vote based on age."
+        },
+        {
+          "code": "let score = 85\nlet grade = score >= 90 ? 'A' : score >= 80 ? 'B' : 'C'\nprint('Grade: \\(grade)')",
+          "description": "Using nested ternary operators to assign grades based on scores."
         }
       ],
       "kotlin": [
@@ -1023,6 +1492,10 @@
         {
           "code": "val age = 18\nval canVote = if (age >= 18) 'Yes' else 'No'",
           "description": "Using an if expression to determine if someone can vote based on age."
+        },
+        {
+          "code": "val score = 85\nval grade = if (score >= 90) 'A' else if (score >= 80) 'B' else 'C'\nprintln('Grade: $grade')",
+          "description": "Using nested if expressions to assign grades based on scores."
         }
       ]
     }

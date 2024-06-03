@@ -48,7 +48,7 @@ const Hero = () => {
             Cross the Syntax Divide
           </motion.h2>
           <motion.p
-            className="text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8 md:max-w-3xl sm:max-w-lg mx-auto sm:mb-8 xs:mb-6 text-gray-600 dark:text-gray-400"
+            className="text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8 md:max-w-3xl sm:max-w-lg mx-auto sm:mb-8 xs:mb-6 text-gray-600 dark:text-gray-300/80"
             variants={itemVariants}
           >
             SyntaxBridge streamlines your coding journey by providing a powerful
@@ -85,7 +85,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               <h3 className="font-semibold xs:text-sm xl:text-lg sm:text-base mb-3">{lang}</h3>
-              <pre className="font-mono xs:text-[12px] xl:text-lg md:text-base text-gray-600 dark:text-gray-400">
+              <pre className="font-mono xs:text-[12px] xl:text-lg md:text-base text-gray-600 dark:text-gray-300/80">
                 {lang === "Python" && 'print("Hello, World!")'}
                 {lang === "C" && 'printf("Hello, World!");'}
                 {lang === "JavaScript" && 'console.log("Hello, World!");'}

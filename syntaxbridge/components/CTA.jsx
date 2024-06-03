@@ -43,7 +43,7 @@ const CTA = () => {
             Start Bridging the Syntax Divide Today
           </h2>
           <div className="cta-container">
-            <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto xs:mb-6 text-gray-600 dark:text-gray-400">
+            <p className="sm:text-base xs:text-sm md:text-lg lg:text-xl xl:text-2xl md:max-w-3xl sm:max-w-lg mx-auto xs:mb-6 text-gray-600 dark:text-gray-300/80">
               Ready to simplify your coding experience? Join SyntaxBridge now
               to streamline learning and mastering multiple languages. Start for free and unlock powerful code comparison and assistance today!
             </p>

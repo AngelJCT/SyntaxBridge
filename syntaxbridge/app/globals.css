@@ -139,7 +139,7 @@
 }
 
 .feature-description {
-  @apply sm:text-base xs:text-sm text-gray-600 dark:text-gray-400 leading-6 mb-5;
+  @apply sm:text-base xs:text-sm text-gray-600 dark:text-gray-300/80 leading-6 mb-5;
 }
 
 .feature-card:hover {
@@ -327,7 +327,7 @@
 }
 
 .cta-container {
-  @apply py-8 bg-[#859bab] dark:bg-[#798189] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl xl:rounded-tr-[200px] xl:rounded-bl-[200px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] xs:rounded-tr-[50px] xs:rounded-bl-[50px];
+  @apply py-8 bg-[] dark:bg-[] backdrop-blur-[4px] bg-opacity-15 dark:backdrop-blur-[] dark:bg-opacity-10 p-4 rounded-xl xl:rounded-tr-[100px] xl:rounded-bl-[100px] lg:rounded-tr-[100px] lg:rounded-bl-[100px] xs:rounded-tr-[50px] xs:rounded-bl-[50px];
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   box-shadow: 0 0 30px 0 #8197a8bc;
