@@ -47,9 +47,7 @@ const AIComponent = () => {
         body: JSON.stringify({ code: inputCode, language: targetLanguage}),
       });
       const data = await response.json();
-      const { text, language, code } = extractCodeBlock(data.choices[0]?.message?.content || 'No response from AI');
-      setOutputText(text);
-      setLanguage(language);
+      const code  = extractCodeBlock(data.choices[0]?.message?.content || 'No response from AI');
       setOutputCode(code);
     } catch (error) {
       setOutputCode('Error occurred while fetching the translation');
@@ -59,16 +57,12 @@ const AIComponent = () => {
   };
 
   const extractCodeBlock = (text) => {
-    const codeBlockRegex = /```(\w+)?\n([\s\S]*?)```/;
+    const codeBlockRegex = /```(\w+)?\s*\n([\s\S]*?)\n```/;
     const match = text.match(codeBlockRegex);
     if (match) {
-      return {
-        text: text.replace(codeBlockRegex, '').trim(),
-        language: match[1] || 'text', // Default to 'text' if no language is specified
-        code: match[2]
-      };
+      return match[2];
     }
-    return { text, language: 'text', code: '' };
+    return text;
   }
 
   return (
@@ -86,7 +80,7 @@ const AIComponent = () => {
       </div>
       <div className="code-box-ai p-6">
         <pre  className="w-full xs:h-[400px] lg:h-[600px] font-mono sm:text-lg xs:text-sm text-[#26292b] dark:text-[#f7f8f8] bg-transparent border border-[#26292b15] dark:border-[#b7bdc220] break-words whitespace-pre-wrap overflow-auto">
-            <SyntaxHighlighter language={language} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[500px] lg:h-[700px]">
+            <SyntaxHighlighter language={targetLanguage.toLowerCase() || 'text'} style={isDarkMode ? vs2015Dark : vs2015} className="xs:h-[500px] lg:h-[700px]">
                 {outputCode}
             </SyntaxHighlighter>
         </pre> 

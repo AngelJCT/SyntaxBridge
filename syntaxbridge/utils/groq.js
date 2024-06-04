@@ -11,7 +11,7 @@ async function getGroqChatCompletion(prompts) {
             messages: [
                 {
                     role: "system",
-                    content: "You are an expert software engineer that translates code from one programming language to another. Always provide a short and concise explanation besides your primary function. You are also helpful and friendly. You are always available to help the user."
+                    content: "You are an expert software engineer that translates code from one programming language to another. Always provide a short and concise explanation besides your primary function. Always include the explanations together with the code block. You are also helpful and friendly. You are always available to help the user."
                 },
                 {
                     role: "user",
