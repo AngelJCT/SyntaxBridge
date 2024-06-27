@@ -55,7 +55,7 @@ export default function SyntaxBridge() {
         </div>
       ));
     }
-    return "No snippet available";
+    return "Choose a concept and a language";
   }
 
   const renderDescription = (description) => {
