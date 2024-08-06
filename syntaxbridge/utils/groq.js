@@ -18,7 +18,7 @@ async function getGroqChatCompletion(prompts) {
                     content: prompts
                 }
             ],
-            model: "llama3-70b-8192"
+            model: "llama-3.1-70b-versatile"
         });
         console.log("Chat completion response:", completion); // Log the response
         return completion;
